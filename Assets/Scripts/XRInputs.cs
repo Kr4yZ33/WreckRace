@@ -7,10 +7,12 @@ using System.Linq;
 public class XRInputs : MonoBehaviour
 {
     [SerializeField]
-    XRNode xRNode = XRNode.LeftHand; // reference to the XR node (left hand)
+    readonly XRNode xRNodeL = XRNode.LeftHand; // reference to the XR node (left hand)
+    readonly XRNode xRNodeR = XRNode.RightHand;
     readonly List<InputDevice> devices = new List<InputDevice>(); // read only list of input devices
 
-    InputDevice device; // reference to our input device
+    InputDevice deviceL; // reference to our input device
+    InputDevice deviceR;
     public bool usingCarBlue = false; // bool for using the blue car being true or not
     public bool usingCarRed = false; // bool for using the red car being true or not
     public bool accelerate; // bool for the car accelerating being true or not
@@ -18,6 +20,10 @@ public class XRInputs : MonoBehaviour
     public bool brake; // bool for if the car braking is true or not
     public bool turnR; // bool for if the car turning right is true or not
     public bool turnL; // bool for if the car turning left is true or not
+    public bool idleCarCannons;
+    public bool shootingCarCannons;
+    public bool openCarCannons;
+    public bool reloadCarCannons;
 
     public Transform carFloor; // reference to the transform fo rthe car floor
     public Transform xRRigBlue; // reference to the blue players XR rig
@@ -25,13 +31,20 @@ public class XRInputs : MonoBehaviour
 
     void GetDevice()
     {
-        InputDevices.GetDevicesAtXRNode(xRNode, devices); // get any input devices connected
-        device = devices.FirstOrDefault(); // set our device to the first or default in the input device list
+        InputDevices.GetDevicesAtXRNode(xRNodeL, devices); // get any input devices connected
+        deviceL = devices.FirstOrDefault(); // set our device to the first or default in the input device list
+
+        InputDevices.GetDevicesAtXRNode(xRNodeR, devices); // get any input devices connected
+        deviceR = devices.FirstOrDefault(); // set our device to the first or default in the input device list
     }
 
     void OnEnable()
     {
-        if (!device.isValid) // if not equal to device is valid (there is no device)
+        if (!deviceL.isValid) // if not equal to device is valid (there is no device)
+        {
+            GetDevice(); // call the get device function
+        }
+        if (!deviceR.isValid) // if not equal to device is valid (there is no device)
         {
             GetDevice(); // call the get device function
         }
@@ -69,18 +82,27 @@ public class XRInputs : MonoBehaviour
 
     void Update()
     {
-        if (!device.isValid) // if device is valid is not true
+        if (!deviceL.isValid) // if device is valid is not true
         {
             GetDevice(); // get device
         }
 
-        List<InputFeatureUsage> features = new List<InputFeatureUsage>(); // create a new list for our input features
-        device.TryGetFeatureUsages(features); // get all of the features of any type of device connected
+        if (!deviceR.isValid) // if device is valid is not true
+        {
+            GetDevice(); // get device
+        }
+
+        List<InputFeatureUsage> featuresL = new List<InputFeatureUsage>(); // create a new list for our input features
+        deviceL.TryGetFeatureUsages(featuresL); // get all of the features of any type of device connected
+
+        List<InputFeatureUsage> featuresR = new List<InputFeatureUsage>(); // create a new list for our input features
+        deviceR.TryGetFeatureUsages(featuresR); // get all of the features of any type of device connected
 
         if (usingCarBlue == true) // if using the car bool is true
         {
             LockToCarFloorBlue(); // call the lock to car floor function
-            ControlsWhileDriving(); // call the function for controls while driving
+            ControlsWhileDrivingL(); // call the function for controls while driving left controller
+            ControlsWhileDrivingR(); // call the function for controls while driving right controller
         }
         //if (usingCarRed == true) // if using the car bool is true
         //{
@@ -110,14 +132,14 @@ public class XRInputs : MonoBehaviour
     /// <summary>
     /// controls that are only active while the using car bool is true
     /// </summary>
-    void ControlsWhileDriving()
+    void ControlsWhileDrivingL()
     {
         if (accelerate != true && brake != true && turnL != true && turnR != true) // if accelerate is not equal to true and brake is not equal to true and turn L & R are not eual to true
         {
             idle = true; // set idle to true
         }
 
-        if (device.TryGetFeatureValue(CommonUsages.triggerButton, out bool triggerValue) && triggerValue) // if the trigger button fo the controller is pressed
+        if (deviceL.TryGetFeatureValue(CommonUsages.triggerButton, out bool triggerValue) && triggerValue) // if the trigger button fo the controller is pressed
         {
             accelerate = true; // set accelerate to true
             idle = false; // set idle to false
@@ -127,7 +149,7 @@ public class XRInputs : MonoBehaviour
             accelerate = false; // set accelerate to false
         }
 
-        if (device.TryGetFeatureValue(CommonUsages.primaryButton, out bool buttonValue) && buttonValue) // if the primary button fo the controller is pressed
+        if (deviceL.TryGetFeatureValue(CommonUsages.primaryButton, out bool buttonValue) && buttonValue) // if the primary button fo the controller is pressed
         {
             turnL = true; // set turn left to true
             idle = false; // set idle to false
@@ -137,7 +159,7 @@ public class XRInputs : MonoBehaviour
             turnL = false; // set turn left to false
         }
 
-        if (device.TryGetFeatureValue(CommonUsages.secondaryButton, out bool buttonValue2) && buttonValue2) // if the secondary button fo the controller is pressed
+        if (deviceL.TryGetFeatureValue(CommonUsages.secondaryButton, out bool buttonValue2) && buttonValue2) // if the secondary button fo the controller is pressed
         {
             turnR = true;  // set turn right to true
             idle = false; // set idle to false
@@ -147,7 +169,7 @@ public class XRInputs : MonoBehaviour
             turnR = false;  // set turn right to false
         }
 
-        if (device.TryGetFeatureValue(CommonUsages.primary2DAxis, out Vector2 movementVector) && movementVector != Vector2.zero) // get the direction of the analogue stick, if movement vector is not equal to vector2.zero (is moving in a direction)
+        if (deviceL.TryGetFeatureValue(CommonUsages.primary2DAxis, out Vector2 movementVector) && movementVector != Vector2.zero) // get the direction of the analogue stick, if movement vector is not equal to vector2.zero (is moving in a direction)
         {
             brake = true; // set turn brake to true
             idle = false; // set idle to false
@@ -155,6 +177,47 @@ public class XRInputs : MonoBehaviour
         else if (movementVector == Vector2.zero) // otherwise if movement vector is equal to vector2.zero (not moving)
         {
             brake = false; // set turn brake to false
+        }
+    }
+    /// <summary>
+    /// 
+    /// </summary>
+    void ControlsWhileDrivingR()
+    {
+        if (shootingCarCannons != true && openCarCannons != true && reloadCarCannons != true)
+        {
+            idleCarCannons = true; // set idle to true
+        }
+
+        if (deviceL.TryGetFeatureValue(CommonUsages.triggerButton, out bool triggerValue) && triggerValue) // if the trigger button fo the controller is pressed
+        {
+            shootingCarCannons = true; // set shooting car cannons to true
+            idleCarCannons = false;
+        }
+        else if (triggerValue != true) // otherwsie if the trigger button is not pressed
+        {
+            shootingCarCannons = false; // set shooting car cannons to false
+            idleCarCannons = false;
+        }
+
+        if (deviceL.TryGetFeatureValue(CommonUsages.primaryButton, out bool buttonValue) && buttonValue) // if the primary button fo the controller is pressed
+        {
+            openCarCannons = true;  // set open car cannons to true
+            idleCarCannons = false;
+        }
+        else if (buttonValue == false) // otherwise the button is not being pressed
+        {
+            openCarCannons = false; // set open car cannons to false
+        }
+
+        if (deviceL.TryGetFeatureValue(CommonUsages.secondaryButton, out bool buttonValue2) && buttonValue2) // if the secondary button fo the controller is pressed
+        {
+            reloadCarCannons = true;  // set reload car cannons to true
+            idleCarCannons = false;
+        }
+        else if (buttonValue2 == false) // otherwise the button is not being pressed
+        {
+            reloadCarCannons = false;  // set reload car cannons to false
         }
     }
 }

@@ -3485,6 +3485,7 @@ GameObject:
   - component: {fileID: 152862839}
   - component: {fileID: 152862838}
   - component: {fileID: 152862837}
+  - component: {fileID: 152862840}
   m_Layer: 0
   m_Name: BlueTrackLandingZone
   m_TagString: Untagged
@@ -3566,6 +3567,51 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 152862835}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &152862840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 152862835}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38f6bf3d943ac7945842268c9ef1dca6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_InteractionManager: {fileID: 1827444434}
+  m_Colliders: []
+  m_InteractionLayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_OnFirstHoverEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnHoverEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnHoverExit:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnLastHoverExit:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnSelectEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnSelectExit:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnActivate:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnDeactivate:
+    m_PersistentCalls:
+      m_Calls: []
+  m_CustomReticle: {fileID: 0}
+  m_TeleportationProvider: {fileID: 0}
+  m_MatchOrientation: 0
+  m_TeleportTrigger: 0
 --- !u!1 &157309331
 GameObject:
   m_ObjectHideFlags: 0
@@ -24100,8 +24146,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1041743904}
   m_LocalRotation: {x: -0.0014648836, y: -0, z: -0, w: 0.999999}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 10, y: 10, z: 10}
+  m_LocalPosition: {x: -0.00000095367, y: 0, z: -0.0000014007}
+  m_LocalScale: {x: 19.886, y: 19.886, z: 19.886}
   m_Children: []
   m_Father: {fileID: 1496712875}
   m_RootOrder: 0
@@ -33697,7 +33743,7 @@ GameObject:
   - component: {fileID: 1492939806}
   - component: {fileID: 1492939805}
   - component: {fileID: 1492939804}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: CarFloor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47685,6 +47731,7 @@ GameObject:
   - component: {fileID: 2144953111}
   - component: {fileID: 2144953110}
   - component: {fileID: 2144953109}
+  - component: {fileID: 2144953112}
   m_Layer: 0
   m_Name: RedTrackLandingZone
   m_TagString: Untagged
@@ -47766,6 +47813,51 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2144953107}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2144953112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2144953107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38f6bf3d943ac7945842268c9ef1dca6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_InteractionManager: {fileID: 1827444434}
+  m_Colliders: []
+  m_InteractionLayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_OnFirstHoverEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnHoverEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnHoverExit:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnLastHoverExit:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnSelectEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnSelectExit:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnActivate:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnDeactivate:
+    m_PersistentCalls:
+      m_Calls: []
+  m_CustomReticle: {fileID: 0}
+  m_TeleportationProvider: {fileID: 0}
+  m_MatchOrientation: 0
+  m_TeleportTrigger: 0
 --- !u!4 &55714089959359822
 Transform:
   m_ObjectHideFlags: 0
@@ -47792,9 +47884,9 @@ GameObject:
   - component: {fileID: 8737844956905408165}
   - component: {fileID: 5186339492830717122}
   - component: {fileID: 67552144597731071}
-  m_Layer: 15
+  m_Layer: 8
   m_Name: FR
-  m_TagString: Untagged
+  m_TagString: HeavyWeapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -52789,9 +52881,9 @@ GameObject:
   - component: {fileID: 1089123926430921913}
   - component: {fileID: 1089123926430921912}
   - component: {fileID: 1089123926430921914}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BlueCar
-  m_TagString: Untagged
+  m_TagString: HeavyWeapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -52808,7 +52900,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d5e9fc241c15794f974a5a9ca2af8cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  xRNode: 4
   usingCarBlue: 0
   usingCarRed: 0
   accelerate: 0
@@ -52816,6 +52907,10 @@ MonoBehaviour:
   brake: 0
   turnR: 0
   turnL: 0
+  idleCarCannons: 0
+  shootingCarCannons: 0
+  openCarCannons: 0
+  reloadCarCannons: 0
   carFloor: {fileID: 1492939803}
   xRRigBlue: {fileID: 739050630}
 --- !u!114 &1089123926430921911
@@ -52830,12 +52925,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55d19f7ff3d5bc94ba3e3e31acad6a5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioSource: {fileID: 0}
-  idleClip: {fileID: 0}
-  accelerateClip: {fileID: 0}
-  brakeClip: {fileID: 0}
-  carSkeletonExplode: {fileID: 0}
-  carSkinExplode: {fileID: 0}
+  audioSource: {fileID: 1089123926430921912}
+  idleClip: {fileID: 8300000, guid: 5490b5823e5b6e94f86bdedd206b3857, type: 3}
+  accelerateClip: {fileID: 8300000, guid: 8c4ccd04337176240ac481bb37400fbb, type: 3}
+  brakeClip: {fileID: 8300000, guid: b138506adf0c0b74088c2832dad4f470, type: 3}
+  carSkeletonExplode: {fileID: 8300000, guid: 7bd6af3997c30e149afcbd3c37993b34, type: 3}
+  carSkinExplode: {fileID: 8300000, guid: 4f2c3b33a2bb9624184e519e8978fd3b, type: 3}
   volume: 0.5
 --- !u!82 &1089123926430921912
 AudioSource:
@@ -52847,7 +52942,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: ddfb8e97f93202048872999b88847db1, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -52960,10 +53055,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   carAudio: {fileID: 1089123926430921911}
   xRInputManager: {fileID: 1089123926430921910}
-  throttleWheels: []
-  steeringWheels: []
-  strengthCoefficient: 200000
-  maxTurn: 10
+  throttleWheels:
+  - {fileID: 8706191943170443919}
+  - {fileID: 2579165745408706210}
+  steeringWheels:
+  - {fileID: 1089543391553506472}
+  - {fileID: 67552144597731071}
+  strengthCoefficient: 500000
+  maxTurn: 20
   blueRaceStart: {fileID: 1679739693}
   rb: {fileID: 0}
   m_Accelleration: 0
@@ -53682,9 +53781,9 @@ GameObject:
   - component: {fileID: 1110248517736031389}
   - component: {fileID: 1102517778013579753}
   - component: {fileID: 1089543391553506472}
-  m_Layer: 15
+  m_Layer: 8
   m_Name: FL
-  m_TagString: Untagged
+  m_TagString: HeavyWeapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -53730,9 +53829,9 @@ GameObject:
   - component: {fileID: 1086332391462907391}
   - component: {fileID: 1110248524183630649}
   - component: {fileID: 1102517781791911339}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FLCap
-  m_TagString: Untagged
+  m_TagString: HeavyWeapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -58590,9 +58689,9 @@ GameObject:
   - component: {fileID: 1314038654026141153}
   - component: {fileID: 630993488015979471}
   - component: {fileID: 2332248146496174734}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RRCap
-  m_TagString: Untagged
+  m_TagString: HeavyWeapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -58608,9 +58707,9 @@ GameObject:
   - component: {fileID: 5038914976802147910}
   - component: {fileID: 7226474766981895087}
   - component: {fileID: 6232194740398573019}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FRCap
-  m_TagString: Untagged
+  m_TagString: HeavyWeapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -58798,9 +58897,9 @@ GameObject:
   - component: {fileID: 1947347596306961418}
   - component: {fileID: 4727078594016209627}
   - component: {fileID: 2955078430890339447}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RLCap
-  m_TagString: Untagged
+  m_TagString: HeavyWeapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -58825,9 +58924,9 @@ GameObject:
   - component: {fileID: 2575321233873152168}
   - component: {fileID: 3738586679639168390}
   - component: {fileID: 2579165745408706210}
-  m_Layer: 15
+  m_Layer: 8
   m_Name: RR
-  m_TagString: Untagged
+  m_TagString: HeavyWeapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -59340,6 +59439,8 @@ GameObject:
   - component: {fileID: 5875152382650179143}
   - component: {fileID: 3945523715701479753}
   - component: {fileID: 4973567436500843265}
+  - component: {fileID: 4973567436500843267}
+  - component: {fileID: 4973567436500843266}
   m_Layer: 8
   m_Name: ToonMachineGun_07 (1)
   m_TagString: HeavyWeapon
@@ -59360,6 +59461,64 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.57, y: 0.29, z: 0.12}
   m_Center: {x: -0.17, y: 0.05, z: 0}
+--- !u!114 &4973567436500843266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4973567436500843264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a35f6cfbfba9b548aaa00d52cfe8a50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_InteractionManager: {fileID: 1827444434}
+  m_Colliders: []
+  m_InteractionLayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_OnFirstHoverEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnHoverEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnHoverExit:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnLastHoverExit:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnSelectEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnSelectExit:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnActivate:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnDeactivate:
+    m_PersistentCalls:
+      m_Calls: []
+  m_CustomReticle: {fileID: 0}
+--- !u!54 &4973567436500843267
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4973567436500843264}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!4 &5038914976802147910
 Transform:
   m_ObjectHideFlags: 0
@@ -78637,6 +78796,9 @@ GameObject:
   - component: {fileID: 6036210673161849775}
   - component: {fileID: 6036210673158087087}
   - component: {fileID: 6036210673167569512}
+  - component: {fileID: 6036210673167569516}
+  - component: {fileID: 6036210673167569518}
+  - component: {fileID: 6036210673167569514}
   m_Layer: 8
   m_Name: ToonMachineGun_07
   m_TagString: HeavyWeapon
@@ -78675,6 +78837,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &6036210673167569514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6036210673167569511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3aecd3500e3379b4ebf28407bb1b9d58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentAnimationState: 0
+  animator: {fileID: 6036210673158087087}
 --- !u!1 &6036210673167569515
 GameObject:
   m_ObjectHideFlags: 0
@@ -78693,6 +78869,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!54 &6036210673167569516
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6036210673167569511}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &6036210673167569517
 GameObject:
   m_ObjectHideFlags: 0
@@ -78710,6 +78902,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
+--- !u!114 &6036210673167569518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6036210673167569511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27da49e72fc0aff43a8e0561407c5565, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  xRInputs: {fileID: 1089123926430921910}
+  animationHandlerMachineGun: {fileID: 6036210673167569514}
+  currentShootingState: 0
 --- !u!1 &6036210673167569519
 GameObject:
   m_ObjectHideFlags: 0
@@ -79298,9 +79505,9 @@ GameObject:
   - component: {fileID: 8416455395534683214}
   - component: {fileID: 6499811918418582447}
   - component: {fileID: 8706191943170443919}
-  m_Layer: 15
+  m_Layer: 8
   m_Name: RL
-  m_TagString: Untagged
+  m_TagString: HeavyWeapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
