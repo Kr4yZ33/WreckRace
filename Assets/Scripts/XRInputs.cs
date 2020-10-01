@@ -21,7 +21,7 @@ public class XRInputs : MonoBehaviour
 
     public Transform carFloor; // reference to the transform fo rthe car floor
     public Transform xRRigBlue; // reference to the blue players XR rig
-    public Transform xRRigRed; // reference to the red players XR rig
+    //public Transform xRRigRed; // reference to the red players XR rig
 
     void GetDevice()
     {
@@ -47,10 +47,10 @@ public class XRInputs : MonoBehaviour
         {
             usingCarBlue = true; // set bool for using car to true
         }
-        if (trigger.CompareTag("RedPlayer")) // if the trigger colliding with us has the tag Player
-        {
-            usingCarRed = true; // set bool for using car to true
-        }
+        //if (trigger.CompareTag("RedPlayer")) // if the trigger colliding with us has the tag Player
+        //{
+           // usingCarRed = true; // set bool for using car to true
+        //}
     }
 
     void OnTriggerExit(Collider trigger)
@@ -61,10 +61,10 @@ public class XRInputs : MonoBehaviour
             usingCarBlue = false; // disable the using car bool
         }
         // disable the piece of code for mounting when we exit that trigger
-        if (trigger.CompareTag("RedPlayer"))
-        {
-            usingCarRed = false; // disable the using car bool
-        }
+        //if (trigger.CompareTag("RedPlayer"))
+        //{
+            //usingCarRed = false; // disable the using car bool
+        //}
     }
 
     void Update()
@@ -82,11 +82,11 @@ public class XRInputs : MonoBehaviour
             LockToCarFloorBlue(); // call the lock to car floor function
             ControlsWhileDriving(); // call the function for controls while driving
         }
-        if (usingCarRed == true) // if using the car bool is true
-        {
-            LockToCarFloorRed(); // call the lock to car floor function
-            ControlsWhileDriving(); // call the function for controls while driving
-        }
+        //if (usingCarRed == true) // if using the car bool is true
+        //{
+            //LockToCarFloorRed(); // call the lock to car floor function
+            //ControlsWhileDriving(); // call the function for controls while driving
+        //}
     }
 
     /// <summary>
@@ -101,11 +101,11 @@ public class XRInputs : MonoBehaviour
     /// <summary>
     /// function to lock the red players XR rig to the car floor
     /// </summary>
-    public void LockToCarFloorRed()
-    {
-        xRRigRed.position = carFloor.position; // set the XR rig position from the XR Rig script to the position of the car floor
-        xRRigRed.rotation = carFloor.rotation; // set the XR rig rotation from the XR Rig script to the rotation of the car floor
-    }
+    //public void LockToCarFloorRed()
+    //{
+        //xRRigRed.position = carFloor.position; // set the XR rig position from the XR Rig script to the position of the car floor
+        //xRRigRed.rotation = carFloor.rotation; // set the XR rig rotation from the XR Rig script to the rotation of the car floor
+    //}
 
     /// <summary>
     /// controls that are only active while the using car bool is true
