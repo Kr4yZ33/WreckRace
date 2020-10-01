@@ -9,6 +9,7 @@ public class BlueCarAudio : MonoBehaviour
     public AudioClip accelerateClip; // reference to our accelerate clip
     public AudioClip brakeClip; // reference to our coast clip
     public AudioClip carSkeletonExplode;
+    public AudioClip carSkinExplode;
     //public AudioClip gameMusic1; // reference to our game music
     private AudioClip currentTrack; // the current track being played
     private AudioClip previousTrack; // the previous track that was played
@@ -38,6 +39,21 @@ public class BlueCarAudio : MonoBehaviour
         else // otherwise
         {
             audioSource.PlayOneShot(carSkeletonExplode, volume);
+        }
+    }
+
+    /// <summary>
+    /// Play car skeleton exploding sound clip
+    /// </summary>
+    public void PlayCarSkinExplode()
+    {
+        if (currentTrack == carSkinExplode) // if the current track is equal to the brake sound clip
+        {
+            return; // exit the script
+        }
+        else // otherwise
+        {
+            audioSource.PlayOneShot(carSkinExplode, volume);
         }
     }
 
