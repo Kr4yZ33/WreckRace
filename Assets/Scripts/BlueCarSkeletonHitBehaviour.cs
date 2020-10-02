@@ -6,7 +6,6 @@ public class BlueCarSkeletonHitBehaviour : MonoBehaviour
 {
     public BlueCarSkeletonExplosion carSkeletonExplosion;
     public BlueCarAudio carAudio; // reference to the Car Audio Script
-    public XRInputs xRInputs;
 
     public bool hit1; // reference to our true or false value for hit1
     public bool hit2; // reference to our true or false value for hit2

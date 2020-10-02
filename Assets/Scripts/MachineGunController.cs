@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MachineGunController : MonoBehaviour
 {
-    public XRInputs xRInputs;
+    public GameManager gameManager;
     public bool okToFireBlueMG = false;
 
     public bool idleCarCannons;
@@ -38,12 +38,12 @@ public class MachineGunController : MonoBehaviour
             HandleReloadState();
         }
 
-        if (xRInputs.usingCarBlue == false)
+        if (gameManager.usingCarBlue == false)
         {
             okToFireBlueMG = false;
             return;
         }
-        else if ( xRInputs.usingCarBlue == true)
+        else if (gameManager.usingCarBlue == true)
         {
             okToFireBlueMG = true;
             HandleBlueMGFiringState();

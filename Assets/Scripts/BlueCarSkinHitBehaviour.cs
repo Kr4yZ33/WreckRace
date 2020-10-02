@@ -5,7 +5,6 @@ using UnityEngine;
 public class BlueCarSkinHitBehaviour : MonoBehaviour
 {
     public BlueCarSkinExplosion carSkinExplosion;
-    public XRInputs xRInputs;
     public BlueCarAudio blueCarAudio;
 
     public bool hit1; // reference to our true or false value for hit1

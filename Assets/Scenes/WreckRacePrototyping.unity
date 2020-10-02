@@ -510,8 +510,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   carSkinExplosion: {fileID: 6526435}
-  xRInputs: {fileID: 1089123926430921910}
-  blueCarAudio: {fileID: 1089123926430921911}
+  blueCarAudio: {fileID: 991346960}
   hit1: 0
   hit2: 0
   hit3: 0
@@ -1731,8 +1730,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   carSkinExplosion: {fileID: 31917644}
-  xRInputs: {fileID: 1089123926430921910}
-  blueCarAudio: {fileID: 1089123926430921911}
+  blueCarAudio: {fileID: 991346960}
   hit1: 0
   hit2: 0
   hit3: 0
@@ -2340,8 +2338,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   carSkinExplosion: {fileID: 48927670}
-  xRInputs: {fileID: 1089123926430921910}
-  blueCarAudio: {fileID: 1089123926430921911}
+  blueCarAudio: {fileID: 991346960}
   hit1: 0
   hit2: 0
   hit3: 0
@@ -2949,8 +2946,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   carSkinExplosion: {fileID: 114516953}
-  xRInputs: {fileID: 1089123926430921910}
-  blueCarAudio: {fileID: 1089123926430921911}
+  blueCarAudio: {fileID: 991346960}
   hit1: 0
   hit2: 0
   hit3: 0
@@ -3252,8 +3248,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   carSkinExplosion: {fileID: 148765553}
-  xRInputs: {fileID: 1089123926430921910}
-  blueCarAudio: {fileID: 1089123926430921911}
+  blueCarAudio: {fileID: 991346960}
   hit1: 0
   hit2: 0
   hit3: 0
@@ -4000,8 +3995,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   carSkinExplosion: {fileID: 164781504}
-  xRInputs: {fileID: 1089123926430921910}
-  blueCarAudio: {fileID: 1089123926430921911}
+  blueCarAudio: {fileID: 991346960}
   hit1: 0
   hit2: 0
   hit3: 0
@@ -5134,8 +5128,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   carSkinExplosion: {fileID: 234278645}
-  xRInputs: {fileID: 1089123926430921910}
-  blueCarAudio: {fileID: 1089123926430921911}
+  blueCarAudio: {fileID: 991346960}
   hit1: 0
   hit2: 0
   hit3: 0
@@ -6236,8 +6229,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   carSkinExplosion: {fileID: 262392790}
-  xRInputs: {fileID: 1089123926430921910}
-  blueCarAudio: {fileID: 1089123926430921911}
+  blueCarAudio: {fileID: 991346960}
   hit1: 0
   hit2: 0
   hit3: 0
@@ -10547,8 +10539,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   carSkinExplosion: {fileID: 433379618}
-  xRInputs: {fileID: 1089123926430921910}
-  blueCarAudio: {fileID: 1089123926430921911}
+  blueCarAudio: {fileID: 991346960}
   hit1: 0
   hit2: 0
   hit3: 0
@@ -10850,8 +10841,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   carSkinExplosion: {fileID: 449986860}
-  xRInputs: {fileID: 1089123926430921910}
-  blueCarAudio: {fileID: 1089123926430921911}
+  blueCarAudio: {fileID: 991346960}
   hit1: 0
   hit2: 0
   hit3: 0
@@ -12071,8 +12061,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   carSkinExplosion: {fileID: 488723877}
-  xRInputs: {fileID: 1089123926430921910}
-  blueCarAudio: {fileID: 1089123926430921911}
+  blueCarAudio: {fileID: 991346960}
   hit1: 0
   hit2: 0
   hit3: 0
@@ -12833,8 +12822,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   carSkinExplosion: {fileID: 526147344}
-  xRInputs: {fileID: 1089123926430921910}
-  blueCarAudio: {fileID: 1089123926430921911}
+  blueCarAudio: {fileID: 991346960}
   hit1: 0
   hit2: 0
   hit3: 0
@@ -12983,8 +12971,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   carSkinExplosion: {fileID: 536312796}
-  xRInputs: {fileID: 1089123926430921910}
-  blueCarAudio: {fileID: 1089123926430921911}
+  blueCarAudio: {fileID: 991346960}
   hit1: 0
   hit2: 0
   hit3: 0
@@ -13060,7 +13047,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 547955723}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: StartPortals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15276,8 +15263,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   carSkinExplosion: {fileID: 651100893}
-  xRInputs: {fileID: 1089123926430921910}
-  blueCarAudio: {fileID: 1089123926430921911}
+  blueCarAudio: {fileID: 991346960}
   hit1: 0
   hit2: 0
   hit3: 0
@@ -17206,8 +17192,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   carSkinExplosion: {fileID: 720692713}
-  xRInputs: {fileID: 1089123926430921910}
-  blueCarAudio: {fileID: 1089123926430921911}
+  blueCarAudio: {fileID: 991346960}
   hit1: 0
   hit2: 0
   hit3: 0
@@ -17767,8 +17752,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   carSkinExplosion: {fileID: 752806740}
-  xRInputs: {fileID: 1089123926430921910}
-  blueCarAudio: {fileID: 1089123926430921911}
+  blueCarAudio: {fileID: 991346960}
   hit1: 0
   hit2: 0
   hit3: 0
@@ -18070,8 +18054,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   carSkinExplosion: {fileID: 761579494}
-  xRInputs: {fileID: 1089123926430921910}
-  blueCarAudio: {fileID: 1089123926430921911}
+  blueCarAudio: {fileID: 991346960}
   hit1: 0
   hit2: 0
   hit3: 0
@@ -19082,8 +19065,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   carSkinExplosion: {fileID: 806883000}
-  xRInputs: {fileID: 1089123926430921910}
-  blueCarAudio: {fileID: 1089123926430921911}
+  blueCarAudio: {fileID: 991346960}
   hit1: 0
   hit2: 0
   hit3: 0
@@ -20456,8 +20438,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   carSkinExplosion: {fileID: 900465950}
-  xRInputs: {fileID: 1089123926430921910}
-  blueCarAudio: {fileID: 1089123926430921911}
+  blueCarAudio: {fileID: 991346960}
   hit1: 0
   hit2: 0
   hit3: 0
@@ -20912,8 +20893,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   carSkinExplosion: {fileID: 911764559}
-  xRInputs: {fileID: 1089123926430921910}
-  blueCarAudio: {fileID: 1089123926430921911}
+  blueCarAudio: {fileID: 991346960}
   hit1: 0
   hit2: 0
   hit3: 0
@@ -21062,8 +21042,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   carSkeletonExplosion: {fileID: 911796897}
-  carAudio: {fileID: 1089123926430921911}
-  xRInputs: {fileID: 1089123926430921910}
+  carAudio: {fileID: 991346960}
   hit1: 0
   hit2: 0
   hit3: 0
@@ -22818,7 +22797,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 991346959}
-  m_Layer: 0
+  - component: {fileID: 991346961}
+  - component: {fileID: 991346960}
+  m_Layer: 5
   m_Name: Managers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22839,6 +22820,51 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &991346960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 991346958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55d19f7ff3d5bc94ba3e3e31acad6a5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameManager: {fileID: 991346961}
+  audioSource: {fileID: 1089123926430921912}
+  idleClip: {fileID: 8300000, guid: 5490b5823e5b6e94f86bdedd206b3857, type: 3}
+  accelerateClip: {fileID: 8300000, guid: 8c4ccd04337176240ac481bb37400fbb, type: 3}
+  brakeClip: {fileID: 8300000, guid: b138506adf0c0b74088c2832dad4f470, type: 3}
+  ignitionClip: {fileID: 8300000, guid: ddfb8e97f93202048872999b88847db1, type: 3}
+  carSkeletonExplode: {fileID: 8300000, guid: 7bd6af3997c30e149afcbd3c37993b34, type: 3}
+  carSkinExplode: {fileID: 8300000, guid: 4f2c3b33a2bb9624184e519e8978fd3b, type: 3}
+  volume: 0.5
+  delay: 2
+--- !u!114 &991346961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 991346958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5f63a6146af98f45a9ebba9398544d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  xRNodeB: 4
+  blueCarController: {fileID: 1089123926430921914}
+  usingCarBlue: 0
+  accelerate: 0
+  idle: 0
+  brake: 0
+  turnR: 0
+  turnL: 0
+  bluesCarExit: {fileID: 198773900}
+  blueCarFloor: {fileID: 1803638696}
+  xRRigBlue: {fileID: 739050630}
 --- !u!1 &993888503
 GameObject:
   m_ObjectHideFlags: 0
@@ -22921,8 +22947,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   carSkinExplosion: {fileID: 993888506}
-  xRInputs: {fileID: 1089123926430921910}
-  blueCarAudio: {fileID: 1089123926430921911}
+  blueCarAudio: {fileID: 991346960}
   hit1: 0
   hit2: 0
   hit3: 0
@@ -23377,8 +23402,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   carSkinExplosion: {fileID: 1011499489}
-  xRInputs: {fileID: 1089123926430921910}
-  blueCarAudio: {fileID: 1089123926430921911}
+  blueCarAudio: {fileID: 991346960}
   hit1: 0
   hit2: 0
   hit3: 0
@@ -23829,8 +23853,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   carSkinExplosion: {fileID: 1015184785}
-  xRInputs: {fileID: 1089123926430921910}
-  blueCarAudio: {fileID: 1089123926430921911}
+  blueCarAudio: {fileID: 991346960}
   hit1: 0
   hit2: 0
   hit3: 0
@@ -23979,8 +24002,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   carSkinExplosion: {fileID: 1017636474}
-  xRInputs: {fileID: 1089123926430921910}
-  blueCarAudio: {fileID: 1089123926430921911}
+  blueCarAudio: {fileID: 991346960}
   hit1: 0
   hit2: 0
   hit3: 0
@@ -24677,8 +24699,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   carSkinExplosion: {fileID: 1066616020}
-  xRInputs: {fileID: 1089123926430921910}
-  blueCarAudio: {fileID: 1089123926430921911}
+  blueCarAudio: {fileID: 991346960}
   hit1: 0
   hit2: 0
   hit3: 0
@@ -26608,7 +26629,7 @@ MonoBehaviour:
   m_SelectUsage: 3
   m_ActivateUsage: 2
   m_UIPressUsage: 2
-  m_AxisToPressThreshold: 0.1
+  m_AxisToPressThreshold: 0.3
   m_ModelPrefab: {fileID: 0}
   m_ModelTransform: {fileID: 0}
   m_AnimateModel: 0
@@ -27322,8 +27343,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   carSkinExplosion: {fileID: 1159986156}
-  xRInputs: {fileID: 1089123926430921910}
-  blueCarAudio: {fileID: 1089123926430921911}
+  blueCarAudio: {fileID: 991346960}
   hit1: 0
   hit2: 0
   hit3: 0
@@ -27592,7 +27612,7 @@ MonoBehaviour:
   m_Colliders: []
   m_InteractionLayerMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 65536
   m_OnFirstHoverEnter:
     m_PersistentCalls:
       m_Calls: []
@@ -27611,7 +27631,7 @@ MonoBehaviour:
   m_OnSelectExit:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1089123926430921910}
+      - m_Target: {fileID: 991346961}
         m_MethodName: ExitBlueCar
         m_Mode: 1
         m_Arguments:
@@ -28969,8 +28989,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   carSkinExplosion: {fileID: 1252713870}
-  xRInputs: {fileID: 1089123926430921910}
-  blueCarAudio: {fileID: 1089123926430921911}
+  blueCarAudio: {fileID: 991346960}
   hit1: 0
   hit2: 0
   hit3: 0
@@ -29731,8 +29750,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   carSkinExplosion: {fileID: 1317754968}
-  xRInputs: {fileID: 1089123926430921910}
-  blueCarAudio: {fileID: 1089123926430921911}
+  blueCarAudio: {fileID: 991346960}
   hit1: 0
   hit2: 0
   hit3: 0
@@ -30646,8 +30664,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   carSkinExplosion: {fileID: 1349408437}
-  xRInputs: {fileID: 1089123926430921910}
-  blueCarAudio: {fileID: 1089123926430921911}
+  blueCarAudio: {fileID: 991346960}
   hit1: 0
   hit2: 0
   hit3: 0
@@ -30949,8 +30966,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   carSkinExplosion: {fileID: 1353535599}
-  xRInputs: {fileID: 1089123926430921910}
-  blueCarAudio: {fileID: 1089123926430921911}
+  blueCarAudio: {fileID: 991346960}
   hit1: 0
   hit2: 0
   hit3: 0
@@ -31099,8 +31115,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   carSkinExplosion: {fileID: 1361759647}
-  xRInputs: {fileID: 1089123926430921910}
-  blueCarAudio: {fileID: 1089123926430921911}
+  blueCarAudio: {fileID: 991346960}
   hit1: 0
   hit2: 0
   hit3: 0
@@ -32932,8 +32947,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   carSkeletonExplosion: {fileID: 1448946608}
-  carAudio: {fileID: 1089123926430921911}
-  xRInputs: {fileID: 1089123926430921910}
+  carAudio: {fileID: 991346960}
   hit1: 0
   hit2: 0
   hit3: 0
@@ -33082,8 +33096,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   carSkinExplosion: {fileID: 1449171068}
-  xRInputs: {fileID: 1089123926430921910}
-  blueCarAudio: {fileID: 1089123926430921911}
+  blueCarAudio: {fileID: 991346960}
   hit1: 0
   hit2: 0
   hit3: 0
@@ -33385,8 +33398,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   carSkinExplosion: {fileID: 1467825763}
-  xRInputs: {fileID: 1089123926430921910}
-  blueCarAudio: {fileID: 1089123926430921911}
+  blueCarAudio: {fileID: 991346960}
   hit1: 0
   hit2: 0
   hit3: 0
@@ -33535,8 +33547,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   carSkinExplosion: {fileID: 1467949260}
-  xRInputs: {fileID: 1089123926430921910}
-  blueCarAudio: {fileID: 1089123926430921911}
+  blueCarAudio: {fileID: 991346960}
   hit1: 0
   hit2: 0
   hit3: 0
@@ -33613,7 +33624,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1471964744}
   - component: {fileID: 1471964745}
-  m_Layer: 0
+  - component: {fileID: 1471964746}
+  m_Layer: 17
   m_Name: TriggerArea
   m_TagString: BlueRaceStart
   m_Icon: {fileID: 0}
@@ -33642,11 +33654,27 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1471964743}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 10.99, y: 3.17, z: 14.73}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &1471964746
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1471964743}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &1475943049
 GameObject:
   m_ObjectHideFlags: 0
@@ -33882,8 +33910,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   carSkinExplosion: {fileID: 1480722470}
-  xRInputs: {fileID: 1089123926430921910}
-  blueCarAudio: {fileID: 1089123926430921911}
+  blueCarAudio: {fileID: 991346960}
   hit1: 0
   hit2: 0
   hit3: 0
@@ -34032,8 +34059,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   carSkinExplosion: {fileID: 1485677728}
-  xRInputs: {fileID: 1089123926430921910}
-  blueCarAudio: {fileID: 1089123926430921911}
+  blueCarAudio: {fileID: 991346960}
   hit1: 0
   hit2: 0
   hit3: 0
@@ -34320,8 +34346,8 @@ MonoBehaviour:
   m_OnSelectEnter:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1089123926430921911}
-        m_MethodName: PlayCarIgnitionClip
+      - m_Target: {fileID: 991346960}
+        m_MethodName: PlayIgnitionClip
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -34675,8 +34701,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   carSkinExplosion: {fileID: 1507989736}
-  xRInputs: {fileID: 1089123926430921910}
-  blueCarAudio: {fileID: 1089123926430921911}
+  blueCarAudio: {fileID: 991346960}
   hit1: 0
   hit2: 0
   hit3: 0
@@ -34825,8 +34850,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   carSkinExplosion: {fileID: 1516491090}
-  xRInputs: {fileID: 1089123926430921910}
-  blueCarAudio: {fileID: 1089123926430921911}
+  blueCarAudio: {fileID: 991346960}
   hit1: 0
   hit2: 0
   hit3: 0
@@ -35885,8 +35909,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   carSkinExplosion: {fileID: 1573562405}
-  xRInputs: {fileID: 1089123926430921910}
-  blueCarAudio: {fileID: 1089123926430921911}
+  blueCarAudio: {fileID: 991346960}
   hit1: 0
   hit2: 0
   hit3: 0
@@ -36035,8 +36058,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   carSkeletonExplosion: {fileID: 1581481199}
-  carAudio: {fileID: 1089123926430921911}
-  xRInputs: {fileID: 1089123926430921910}
+  carAudio: {fileID: 991346960}
   hit1: 0
   hit2: 0
   hit3: 0
@@ -37007,8 +37029,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   carSkeletonExplosion: {fileID: 1619627114}
-  carAudio: {fileID: 1089123926430921911}
-  xRInputs: {fileID: 1089123926430921910}
+  carAudio: {fileID: 991346960}
   hit1: 0
   hit2: 0
   hit3: 0
@@ -37616,8 +37637,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   carSkinExplosion: {fileID: 1654378415}
-  xRInputs: {fileID: 1089123926430921910}
-  blueCarAudio: {fileID: 1089123926430921911}
+  blueCarAudio: {fileID: 991346960}
   hit1: 0
   hit2: 0
   hit3: 0
@@ -38398,7 +38418,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1679739693}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: BlueRaceStartPosition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38807,8 +38827,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   carSkinExplosion: {fileID: 1693998323}
-  xRInputs: {fileID: 1089123926430921910}
-  blueCarAudio: {fileID: 1089123926430921911}
+  blueCarAudio: {fileID: 991346960}
   hit1: 0
   hit2: 0
   hit3: 0
@@ -39263,8 +39282,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   carSkinExplosion: {fileID: 1718253353}
-  xRInputs: {fileID: 1089123926430921910}
-  blueCarAudio: {fileID: 1089123926430921911}
+  blueCarAudio: {fileID: 991346960}
   hit1: 0
   hit2: 0
   hit3: 0
@@ -39868,8 +39886,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   carSkinExplosion: {fileID: 1758788389}
-  xRInputs: {fileID: 1089123926430921910}
-  blueCarAudio: {fileID: 1089123926430921911}
+  blueCarAudio: {fileID: 991346960}
   hit1: 0
   hit2: 0
   hit3: 0
@@ -41152,8 +41169,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   carSkinExplosion: {fileID: 1807424827}
-  xRInputs: {fileID: 1089123926430921910}
-  blueCarAudio: {fileID: 1089123926430921911}
+  blueCarAudio: {fileID: 991346960}
   hit1: 0
   hit2: 0
   hit3: 0
@@ -45649,8 +45665,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   carSkinExplosion: {fileID: 1997401365}
-  xRInputs: {fileID: 1089123926430921910}
-  blueCarAudio: {fileID: 1089123926430921911}
+  blueCarAudio: {fileID: 991346960}
   hit1: 0
   hit2: 0
   hit3: 0
@@ -45799,8 +45814,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   carSkinExplosion: {fileID: 2001129069}
-  xRInputs: {fileID: 1089123926430921910}
-  blueCarAudio: {fileID: 1089123926430921911}
+  blueCarAudio: {fileID: 991346960}
   hit1: 0
   hit2: 0
   hit3: 0
@@ -46102,8 +46116,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   carSkinExplosion: {fileID: 2004872414}
-  xRInputs: {fileID: 1089123926430921910}
-  blueCarAudio: {fileID: 1089123926430921911}
+  blueCarAudio: {fileID: 991346960}
   hit1: 0
   hit2: 0
   hit3: 0
@@ -46558,8 +46571,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   carSkinExplosion: {fileID: 2038734141}
-  xRInputs: {fileID: 1089123926430921910}
-  blueCarAudio: {fileID: 1089123926430921911}
+  blueCarAudio: {fileID: 991346960}
   hit1: 0
   hit2: 0
   hit3: 0
@@ -47010,8 +47022,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   carSkinExplosion: {fileID: 2060728093}
-  xRInputs: {fileID: 1089123926430921910}
-  blueCarAudio: {fileID: 1089123926430921911}
+  blueCarAudio: {fileID: 991346960}
   hit1: 0
   hit2: 0
   hit3: 0
@@ -47986,8 +47997,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   carSkinExplosion: {fileID: 2116830225}
-  xRInputs: {fileID: 1089123926430921910}
-  blueCarAudio: {fileID: 1089123926430921911}
+  blueCarAudio: {fileID: 991346960}
   hit1: 0
   hit2: 0
   hit3: 0
@@ -48136,8 +48146,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   carSkinExplosion: {fileID: 2122581729}
-  xRInputs: {fileID: 1089123926430921910}
-  blueCarAudio: {fileID: 1089123926430921911}
+  blueCarAudio: {fileID: 991346960}
   hit1: 0
   hit2: 0
   hit3: 0
@@ -53494,8 +53503,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1089123926431189105}
-  - component: {fileID: 1089123926430921911}
-  - component: {fileID: 1089123926430921910}
   - component: {fileID: 1089123926430921913}
   - component: {fileID: 1089123926430921912}
   - component: {fileID: 1089123926430921914}
@@ -53507,50 +53514,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1089123926430921910
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1089123926430921909}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d5e9fc241c15794f974a5a9ca2af8cc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  xRNodeL: 4
-  usingCarBlue: 0
-  accelerate: 0
-  idle: 0
-  brake: 0
-  turnR: 0
-  turnL: 0
-  bluesCarExit: {fileID: 198773900}
-  blueCarFloor: {fileID: 1803638696}
-  xRRigBlue: {fileID: 739050630}
---- !u!114 &1089123926430921911
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1089123926430921909}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55d19f7ff3d5bc94ba3e3e31acad6a5c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  xRInputs: {fileID: 1089123926430921910}
-  audioSource: {fileID: 1089123926430921912}
-  idleClip: {fileID: 8300000, guid: 5490b5823e5b6e94f86bdedd206b3857, type: 3}
-  accelerateClip: {fileID: 8300000, guid: 8c4ccd04337176240ac481bb37400fbb, type: 3}
-  brakeClip: {fileID: 8300000, guid: b138506adf0c0b74088c2832dad4f470, type: 3}
-  ignitionClip: {fileID: 8300000, guid: ddfb8e97f93202048872999b88847db1, type: 3}
-  carSkeletonExplode: {fileID: 8300000, guid: 7bd6af3997c30e149afcbd3c37993b34, type: 3}
-  carSkinExplode: {fileID: 8300000, guid: 4f2c3b33a2bb9624184e519e8978fd3b, type: 3}
-  volume: 0.5
-  delay: 2
 --- !u!82 &1089123926430921912
 AudioSource:
   m_ObjectHideFlags: 0
@@ -53672,8 +53635,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f40b9e81b698e984ba8e5d49c0f8e5d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  carAudio: {fileID: 1089123926430921911}
-  xRInputManager: {fileID: 1089123926430921910}
+  gameManager: {fileID: 991346961}
   throttleWheels:
   - {fileID: 403314331}
   - {fileID: 2080785724}
@@ -60173,7 +60135,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27da49e72fc0aff43a8e0561407c5565, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  xRInputs: {fileID: 1089123926430921910}
+  gameManager: {fileID: 991346961}
   okToFireBlueMG: 0
   idleCarCannons: 0
   shootingCarCannons: 0
@@ -60316,8 +60278,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   carSkinExplosion: {fileID: 5265271171640600948}
-  xRInputs: {fileID: 1089123926430921910}
-  blueCarAudio: {fileID: 1089123926430921911}
+  blueCarAudio: {fileID: 991346960}
   hit1: 0
   hit2: 0
   hit3: 0
@@ -79338,6 +79299,8 @@ Animation:
   serializedVersion: 3
   m_Animation: {fileID: 7400000, guid: 072b979ab73390a4b8ecd57277e6788d, type: 2}
   m_Animations:
+  - {fileID: 0}
+  - {fileID: 7400000, guid: 366a27f88e688074ea34dae2294e7c8d, type: 2}
   - {fileID: 7400000, guid: 21fa72a79a4481d4c808a14fef57320d, type: 2}
   - {fileID: 7400000, guid: 072b979ab73390a4b8ecd57277e6788d, type: 2}
   m_WrapMode: 0
@@ -79546,7 +79509,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27da49e72fc0aff43a8e0561407c5565, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  xRInputs: {fileID: 1089123926430921910}
+  gameManager: {fileID: 991346961}
   okToFireBlueMG: 0
   idleCarCannons: 0
   shootingCarCannons: 0
