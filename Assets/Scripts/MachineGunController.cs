@@ -4,32 +4,49 @@ using UnityEngine;
 
 public class MachineGunController : MonoBehaviour
 {
-
     public XRInputs xRInputs;
+    public bool okToFireBlueMG = false;
+
+    public bool idleCarCannons;
+    public bool shootingCarCannons;
+    public bool openCarCannons;
+    public bool reloadCarCannons;
+
     public AnimationHandlerMachineGun animationHandlerMachineGun;
-    public enum ShootingStates { Idle, Shoot, Open, Reload } // our different driving states
-    public ShootingStates currentShootingState; // the current driving state our car is in
+    public enum ShootingStates { Idle, Shoot, Open, Reload } // our different shooting states
+    public ShootingStates currentShootingState; // the current shooting state our car is in
 
     void Update()
     {
-        if (xRInputs.idleCarCannons == true)
+        if (idleCarCannons == true)
         {
             HandleIdleState();
         }
 
-        if (xRInputs.shootingCarCannons == true)
+        if (shootingCarCannons == true)
         {
             HandleShootState();
         }
 
-        if (xRInputs.openCarCannons == true)
+        if (openCarCannons == true)
         {
             HandleOpenState();
         }
 
-        if (xRInputs.reloadCarCannons == true)
+        if (reloadCarCannons == true)
         {
             HandleReloadState();
+        }
+
+        if (xRInputs.usingCarBlue == false)
+        {
+            okToFireBlueMG = false;
+            return;
+        }
+        else if ( xRInputs.usingCarBlue == true)
+        {
+            okToFireBlueMG = true;
+            HandleBlueMGFiringState();
         }
     }
 
@@ -77,6 +94,44 @@ public class MachineGunController : MonoBehaviour
             {
                 animationHandlerMachineGun.CurrentState = AnimationHandlerMachineGun.AnimationState.Reload;  // set the animation handler current state to reload
             }
+        }
+    }
+
+    void HandleBlueMGFiringState()
+    {
+        if (shootingCarCannons != true && openCarCannons != true && reloadCarCannons != true)
+        {
+            idleCarCannons = true; // set idle to true
+        }
+    }
+
+    public void HandleMGOpenState()
+    {
+        if (okToFireBlueMG == true)
+        {
+            openCarCannons = true;  // set open car cannons to true
+            idleCarCannons = false;
+        }
+    }
+
+    public void HandleMGReloadState()
+    {
+        if (okToFireBlueMG == true)
+        {
+            openCarCannons = false;
+            idleCarCannons = false;
+            reloadCarCannons = true;  // set reload car cannons to true
+        }
+    }
+
+    public void ShootBlueMG()
+    {
+        if (okToFireBlueMG == true)
+        {
+            reloadCarCannons = false;
+            openCarCannons = false;
+            idleCarCannons = false;
+            shootingCarCannons = true; // set shooting car cannons to true
         }
     }
 }

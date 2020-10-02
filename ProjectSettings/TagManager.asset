@@ -7,9 +7,11 @@ TagManager:
   - Car
   - HeavyWeapon
   - LightWeapon
-  - MediumWEapon
   - BlueRaceStart
   - RedRaceStart
+  - MediumWeapon
+  - BluePlayer
+  - RedPlayer
   layers:
   - Default
   - TransparentFX
@@ -27,8 +29,8 @@ TagManager:
   - RedTarget
   - BlueTarget
   - Vehicles
-  - 
-  - 
+  - Controllers
+  - Road
   - 
   - 
   - 

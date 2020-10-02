@@ -7,47 +7,44 @@ using System.Linq;
 public class XRInputs : MonoBehaviour
 {
     [SerializeField]
-    readonly XRNode xRNodeL = XRNode.LeftHand; // reference to the XR node (left hand)
-    readonly XRNode xRNodeR = XRNode.RightHand;
+    XRNode xRNodeL = XRNode.LeftHand; // reference to the XR node (left hand)
+    //readonly XRNode xRNodeR = XRNode.RightHand;
     readonly List<InputDevice> devices = new List<InputDevice>(); // read only list of input devices
 
-    InputDevice deviceL; // reference to our input device
-    InputDevice deviceR;
+    InputDevice deviceB; // reference to our input device
+    //InputDevice deviceR;
     public bool usingCarBlue = false; // bool for using the blue car being true or not
-    public bool usingCarRed = false; // bool for using the red car being true or not
+    //public bool usingCarRed = false; // bool for using the red car being true or not
     public bool accelerate; // bool for the car accelerating being true or not
     public bool idle; // bool for if the car being idle is true or not
     public bool brake; // bool for if the car braking is true or not
     public bool turnR; // bool for if the car turning right is true or not
     public bool turnL; // bool for if the car turning left is true or not
-    public bool idleCarCannons;
-    public bool shootingCarCannons;
-    public bool openCarCannons;
-    public bool reloadCarCannons;
 
-    public Transform carFloor; // reference to the transform fo rthe car floor
+    public Transform bluesCarExit;
+    public Transform blueCarFloor; // reference to the transform fo rthe car floor
     public Transform xRRigBlue; // reference to the blue players XR rig
     //public Transform xRRigRed; // reference to the red players XR rig
 
     void GetDevice()
     {
         InputDevices.GetDevicesAtXRNode(xRNodeL, devices); // get any input devices connected
-        deviceL = devices.FirstOrDefault(); // set our device to the first or default in the input device list
+        deviceB = devices.FirstOrDefault(); // set our device to the first or default in the input device list
 
-        InputDevices.GetDevicesAtXRNode(xRNodeR, devices); // get any input devices connected
-        deviceR = devices.FirstOrDefault(); // set our device to the first or default in the input device list
+        //InputDevices.GetDevicesAtXRNode(xRNodeR, devices); // get any input devices connected
+        //deviceR = devices.FirstOrDefault(); // set our device to the first or default in the input device list
     }
 
     void OnEnable()
     {
-        if (!deviceL.isValid) // if not equal to device is valid (there is no device)
+        if (!deviceB.isValid) // if not equal to device is valid (there is no device)
         {
             GetDevice(); // call the get device function
         }
-        if (!deviceR.isValid) // if not equal to device is valid (there is no device)
-        {
-            GetDevice(); // call the get device function
-        }
+        //if (!deviceR.isValid) // if not equal to device is valid (there is no device)
+        //{
+            //GetDevice(); // call the get device function
+        //}
     }
 
     /// <summary>
@@ -56,7 +53,7 @@ public class XRInputs : MonoBehaviour
     /// <param name="trigger"></param>
     void OnTriggerEnter(Collider trigger)
     {
-        if (trigger.CompareTag("BluePlayer")) // if the trigger colliding with us has the tag Player
+        if (trigger.CompareTag("BluePlayer")) // if the trigger colliding with us has the tag blue Player
         {
             usingCarBlue = true; // set bool for using car to true
         }
@@ -82,27 +79,27 @@ public class XRInputs : MonoBehaviour
 
     void Update()
     {
-        if (!deviceL.isValid) // if device is valid is not true
+        if (!deviceB.isValid) // if device is valid is not true
         {
             GetDevice(); // get device
         }
 
-        if (!deviceR.isValid) // if device is valid is not true
-        {
-            GetDevice(); // get device
-        }
+        //if (!deviceR.isValid) // if device is valid is not true
+        //{
+            //GetDevice(); // get device
+        //}
 
-        List<InputFeatureUsage> featuresL = new List<InputFeatureUsage>(); // create a new list for our input features
-        deviceL.TryGetFeatureUsages(featuresL); // get all of the features of any type of device connected
+        List<InputFeatureUsage> featuresB = new List<InputFeatureUsage>(); // create a new list for our input features
+        deviceB.TryGetFeatureUsages(featuresB); // get all of the features of any type of device connected
 
-        List<InputFeatureUsage> featuresR = new List<InputFeatureUsage>(); // create a new list for our input features
-        deviceR.TryGetFeatureUsages(featuresR); // get all of the features of any type of device connected
+        //List<InputFeatureUsage> featuresR = new List<InputFeatureUsage>(); // create a new list for our input features
+        //deviceR.TryGetFeatureUsages(featuresR); // get all of the features of any type of device connected
 
         if (usingCarBlue == true) // if using the car bool is true
         {
             LockToCarFloorBlue(); // call the lock to car floor function
             ControlsWhileDrivingL(); // call the function for controls while driving left controller
-            ControlsWhileDrivingR(); // call the function for controls while driving right controller
+            //ControlsWhileDrivingR(); // call the function for controls while driving right controller
         }
         //if (usingCarRed == true) // if using the car bool is true
         //{
@@ -116,8 +113,8 @@ public class XRInputs : MonoBehaviour
     /// </summary>
     public void LockToCarFloorBlue()
     {
-        xRRigBlue.position = carFloor.position; // set the XR rig position from the XR Rig script to the position of the car floor
-        xRRigBlue.rotation = carFloor.rotation; // set the XR rig rotation from the XR Rig script to the rotation of the car floor
+        xRRigBlue.position = blueCarFloor.position; // set the XR rig position from the XR Rig script to the position of the car floor
+        xRRigBlue.rotation = blueCarFloor.rotation; // set the XR rig rotation from the XR Rig script to the rotation of the car floor
     }
 
     /// <summary>
@@ -139,7 +136,7 @@ public class XRInputs : MonoBehaviour
             idle = true; // set idle to true
         }
 
-        if (deviceL.TryGetFeatureValue(CommonUsages.triggerButton, out bool triggerValue) && triggerValue) // if the trigger button fo the controller is pressed
+        if (deviceB.TryGetFeatureValue(CommonUsages.triggerButton, out bool triggerValue) && triggerValue) // if the trigger button fo the controller is pressed
         {
             accelerate = true; // set accelerate to true
             idle = false; // set idle to false
@@ -149,7 +146,7 @@ public class XRInputs : MonoBehaviour
             accelerate = false; // set accelerate to false
         }
 
-        if (deviceL.TryGetFeatureValue(CommonUsages.primaryButton, out bool buttonValue) && buttonValue) // if the primary button fo the controller is pressed
+        if (deviceB.TryGetFeatureValue(CommonUsages.primaryButton, out bool buttonValue) && buttonValue) // if the primary button fo the controller is pressed
         {
             turnL = true; // set turn left to true
             idle = false; // set idle to false
@@ -159,7 +156,7 @@ public class XRInputs : MonoBehaviour
             turnL = false; // set turn left to false
         }
 
-        if (deviceL.TryGetFeatureValue(CommonUsages.secondaryButton, out bool buttonValue2) && buttonValue2) // if the secondary button fo the controller is pressed
+        if (deviceB.TryGetFeatureValue(CommonUsages.secondaryButton, out bool buttonValue2) && buttonValue2) // if the secondary button fo the controller is pressed
         {
             turnR = true;  // set turn right to true
             idle = false; // set idle to false
@@ -169,7 +166,7 @@ public class XRInputs : MonoBehaviour
             turnR = false;  // set turn right to false
         }
 
-        if (deviceL.TryGetFeatureValue(CommonUsages.primary2DAxis, out Vector2 movementVector) && movementVector != Vector2.zero) // get the direction of the analogue stick, if movement vector is not equal to vector2.zero (is moving in a direction)
+        if (deviceB.TryGetFeatureValue(CommonUsages.primary2DAxis, out Vector2 movementVector) && movementVector != Vector2.zero) // get the direction of the analogue stick, if movement vector is not equal to vector2.zero (is moving in a direction)
         {
             brake = true; // set turn brake to true
             idle = false; // set idle to false
@@ -179,45 +176,10 @@ public class XRInputs : MonoBehaviour
             brake = false; // set turn brake to false
         }
     }
-    /// <summary>
-    /// 
-    /// </summary>
-    void ControlsWhileDrivingR()
+
+    public void ExitBlueCar()
     {
-        if (shootingCarCannons != true && openCarCannons != true && reloadCarCannons != true)
-        {
-            idleCarCannons = true; // set idle to true
-        }
-
-        if (deviceL.TryGetFeatureValue(CommonUsages.triggerButton, out bool triggerValue) && triggerValue) // if the trigger button fo the controller is pressed
-        {
-            shootingCarCannons = true; // set shooting car cannons to true
-            idleCarCannons = false;
-        }
-        else if (triggerValue != true) // otherwsie if the trigger button is not pressed
-        {
-            shootingCarCannons = false; // set shooting car cannons to false
-            idleCarCannons = false;
-        }
-
-        if (deviceL.TryGetFeatureValue(CommonUsages.primaryButton, out bool buttonValue) && buttonValue) // if the primary button fo the controller is pressed
-        {
-            openCarCannons = true;  // set open car cannons to true
-            idleCarCannons = false;
-        }
-        else if (buttonValue == false) // otherwise the button is not being pressed
-        {
-            openCarCannons = false; // set open car cannons to false
-        }
-
-        if (deviceL.TryGetFeatureValue(CommonUsages.secondaryButton, out bool buttonValue2) && buttonValue2) // if the secondary button fo the controller is pressed
-        {
-            reloadCarCannons = true;  // set reload car cannons to true
-            idleCarCannons = false;
-        }
-        else if (buttonValue2 == false) // otherwise the button is not being pressed
-        {
-            reloadCarCannons = false;  // set reload car cannons to false
-        }
+        xRRigBlue.position = bluesCarExit.position; // set the XR rig position from the XR Rig script to the position of the car floor
+        xRRigBlue.rotation = bluesCarExit.rotation; // set the XR rig rotation from the XR Rig script to the rotation of the car floor
     }
 }

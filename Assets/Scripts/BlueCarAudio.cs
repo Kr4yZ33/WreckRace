@@ -4,27 +4,50 @@ using UnityEngine;
 
 public class BlueCarAudio : MonoBehaviour
 {
+    public XRInputs xRInputs;
     public AudioSource audioSource; // Reference to our Audio Source
     public AudioClip idleClip; // reference to our idle clip
     public AudioClip accelerateClip; // reference to our accelerate clip
-    public AudioClip brakeClip; // reference to our coast clip
+    public AudioClip brakeClip; // reference to our deceleration clip
+    public AudioClip ignitionClip; // reference to our ignition clip
     public AudioClip carSkeletonExplode;
     public AudioClip carSkinExplode;
     //public AudioClip gameMusic1; // reference to our game music
     private AudioClip currentTrack; // the current track being played
     private AudioClip previousTrack; // the previous track that was played
     public float volume = 0.5f; // Reference to the volume of our scare shot clip (plays over game musice that is already playing)
+    public float delay = 2;
 
     /// <summary>
     /// This gets called everytime the script gets turned off/on
     /// </summary>
     public void OnEnable()
     {
-        if (currentTrack == null)
+        if(xRInputs.usingCarBlue == true)
         {
-            currentTrack = idleClip; // music to default
+            if (currentTrack == null)
+            {
+                audioSource.PlayOneShot(ignitionClip);
+            }
         }
-        ChangeTrack(currentTrack); // start playing our music
+        
+    }
+
+    private void Update()
+    {
+        if (currentTrack == ignitionClip)
+        {
+            return;
+        }
+        else if (currentTrack == idleClip) // if the current track is equal to the idle sound clip
+        {
+            return; // exit the script
+        }
+        else // otherwise
+        {
+            currentTrack = idleClip; // set our current track to the brake sound clip
+            ChangeTrack(currentTrack); // change the track to our current track
+        }
     }
 
     /// <summary>
@@ -57,6 +80,21 @@ public class BlueCarAudio : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Play break sound clip
+    /// </summary>
+    public void PlayCarIgnitionClip()
+    {
+        if (currentTrack == ignitionClip) // if the current track is equal to the brake sound clip
+        {
+            return; // exit the script
+        }
+        else // otherwise
+        {
+            audioSource.PlayOneShot(ignitionClip);
+        }
+    }
+
 
     /// <summary>
     /// Play break sound clip
@@ -79,14 +117,17 @@ public class BlueCarAudio : MonoBehaviour
     /// </summary>
     public void PlayIdleClip()
     {
-        if (currentTrack == idleClip) // if the current track is equal to the idle sound clip
+        if (currentTrack != ignitionClip)
         {
-            return; // exit the script
-        }
-        else // otherwise
-        {
-            currentTrack = idleClip; // set our current track to the idle sound clip
-            ChangeTrack(currentTrack); // change the track to our current track
+            if (currentTrack == idleClip) // if the current track is equal to the idle sound clip
+            {
+                return; // exit the script
+            }
+            else // otherwise
+            {
+                currentTrack = idleClip; // set our current track to the idle sound clip
+                ChangeTrack(currentTrack); // change the track to our current track
+            }
         }
     }
 

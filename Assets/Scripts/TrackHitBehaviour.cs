@@ -80,7 +80,7 @@ public class TrackHitBehaviour : MonoBehaviour
     /// </summary>
     void CheckHitStatus()
     {
-        if (hit6 == true) // if hit6 is true
+        if (hit10 == true) // if hit6 is true
         {
             //blockRigid.useGravity = true; // enable gravity on the object this script is assigned to
             trackExplosion.ExplodeTrack(); // call the Skeleton explosion function from the Explode script
