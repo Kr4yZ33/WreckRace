@@ -55,16 +55,16 @@ public class BlueCarAudio : MonoBehaviour
     /// </summary>
     public void PlayIgnitionClip()
     {
-        if (currentTrack == ignitionClip) // if the current track is equal to the ignition sound clip
-        {
-            Invoke("IgnitionDelay()", 2);
-        }
-
-        if (currentTrack != ignitionClip) // if the current track is not equal to the igntition sound clip
+        if (currentTrack == null)
         {
             previousTrack = ignitionClip;
             currentTrack = previousTrack;
             audioSource.PlayOneShot(ignitionClip, volume);
+        }
+        if (currentTrack == ignitionClip) // if the current track is equal to the ignition sound clip
+        {
+            Invoke("IgnitionDelay()", 2);
+            return;
         }
     }
 
