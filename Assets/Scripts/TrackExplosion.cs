@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class TrackExplosion : MonoBehaviour
 {
-    public float cubeSize = 0.2f;
-    public int cubesInRow = 2;
-    public int cubesInRowZ = 2;
+    public float cubeSize = 0.5f;
+    public int cubesInRow = 10;
+    public int cubesInRowZ = 5;
 
     float cubePivotDistance;
     Vector3 cubePivot;
@@ -69,7 +69,7 @@ public class TrackExplosion : MonoBehaviour
         GameObject piece;
         piece = GameObject.CreatePrimitive(PrimitiveType.Cube);
         Renderer r = piece.GetComponent<Renderer>(); // Get the renderer of the object object
-        r.material.color = Color.white; // apply the white colour
+        r.material.color = Color.cyan; // apply the white colour
 
         //set piece position and scale
         piece.transform.position = transform.position + new Vector3(cubeSize * x, cubeSize * y, cubeSize * z) - cubePivot;

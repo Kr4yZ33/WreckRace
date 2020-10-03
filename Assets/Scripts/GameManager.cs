@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
 
     InputDevice deviceB; // reference to our input device
                          //InputDevice deviceR;
-
+    public CarDriver carDriver;
     public BlueCarController blueCarController;
     public bool usingCarBlue = false; // bool for using the blue car being true or not
     //public bool usingCarRed = false; // bool for using the red car being true or not

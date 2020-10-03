@@ -94,202 +94,114 @@ public class TrackHitBehaviour : MonoBehaviour
     private void OnTriggerEnter(Collider other) // on a collision between this objects rigidbody and another objects rigidbody
     {
         Debug.Log("I Have collided with" + other.gameObject.name); // debug that outputs what happened with the collision
-
-        if (other.gameObject.layer != 9) // if the layer of the object colliding with us is not blue ranged
         {
-            return;
-        }
-        if (other.gameObject.CompareTag("MediumWeapon")) // If the thing colliding with us has the tag Medium Weapon (because this is track, make the hit behave like a light hit normally would x1 hits)
-        {
-            if (hit9 == true && hit10 == false) // If hit9 is true but hit10 is not true
+            if (other.gameObject.layer == 9)
             {
-                hit10 = true; // set hit10 to true
+                Destroy(other.gameObject); // if the thing hitting us operates on the blue ranged layer, destroy it
             }
-            if (hit8 == true && hit9 == false) // If hit8 is true but hit9 is not true
+            if (other.gameObject.layer != 11) // if the layer of the object colliding with us is not red ranged
             {
-                hit9 = true; // set hit9 to true
+                return;
             }
-            if (hit7 == true && hit8 == false) // If hit7 is true but hit8 is not true
+            if (other.gameObject.CompareTag("MediumWeapon"))// If the thing colliding with us has the tag Medium Weapon (because this is track, make the hit behave like a light hit normally would x1 hits)
             {
-                hit6 = true; // set hit7 to true
+                if (hit9 == true && hit10 == false) // If hit9 is true but hit10 is not true
+                {
+                    hit10 = true; // set hit10 to true
+                }
+                if (hit8 == true && hit9 == false) // If hit8 is true but hit9 is not true
+                {
+                    hit9 = true; // set hit9 to true
+                }
+                if (hit7 == true && hit8 == false) // If hit7 is true but hit8 is not true
+                {
+                    hit8 = true; // set hit7 to true
+                }
+                if (hit6 == true && hit7 == false) // If hit6 is true but hit7 is not true
+                {
+                    hit7 = true; // set hit7 to true
+                }
+                if (hit5 == true && hit6 == false) // If hit5 is true but hit6 is not true
+                {
+                    hit6 = true; // set hit6 to true
+                }
+                if (hit4 == true && hit5 == false) // otherwise if hit4 is true and hit5 is false
+                {
+                    hit5 = true; // set hit5 to true
+                }
+                if (hit3 == true && hit4 == false) // If hit2 is true but hit3 is not true
+                {
+                    hit4 = true; // set hit4 to true
+                }
+                if (hit2 == true && hit3 == false) // otherwise if hit1 is true and hit two is false
+                {
+                    hit3 = true; // set hit2 to true
+                }
+                if (hit1 == true && hit2 == false) // otherwise if hit1 is true and hit two is false
+                {
+                    hit2 = true; // set hit2 to true
+                }
+                if (hit1 == false) // If hit1 is false
+                {
+                    hit1 = true; // set hit1 to true
+                }
             }
-            if (hit6 == true && hit7 == false) // If hit6 is true but hit7 is not true
+            if (other.gameObject.CompareTag("HeavyWeapon")) // If the thing colliding with us has the tag Heavy Weapon (because this is track, make the hit behave like a med hit normally would x2 hits)
             {
-                hit7 = true; // set hit7 to true
+                if (hit9 == true && hit10 == false) // otherwise if hit9 is true but hit10 is false
+                {
+                    hit10 = true; // set hit10 to true
+                }
+                if (hit8 == true && hit9 == false) // otherwise if hit9 is true but hit10 is false
+                {
+                    hit9 = true;
+                    hit10 = true; // set hit10 to true
+                }
+                if (hit7 == true && hit8 == false) // otherwise if hit8 is true but hit9 is false
+                {
+                    hit8 = true; // set hit9 to true
+                    hit9 = true; // and also set hit10 to true
+                }
+                if (hit6 == true && hit7 == false) // otherwise if hit7 is true but hit8 is false
+                {
+                    hit7 = true; // set hit8 to true
+                    hit8 = true; // and also set hit9 to true
+                }
+                if (hit5 == true && hit6 == false) // otherwise if hit3 is true but hit4 is false
+                {
+                    hit6 = true; // and also set hit6 to true
+                    hit7 = true;
+                }
+                if (hit4 == true && hit5 == false) // otherwise if hit3 is true but hit4 is false
+                {
+                    hit5 = true; // set hit5 to true
+                    hit6 = true; // and also set hit6 to true
+                }
+                if (hit3 == true && hit4 == false) // otherwise if hit3 is true but hit4 is false
+                {
+                    hit4 = true; // set hit4 to true
+                    hit5 = true; // and also set hit5 to true
+                }
+                if (hit2 == true && hit3 == false) // otherwise if only hit3 is false
+                {
+                    hit3 = true; // set hit3 to true
+                    hit4 = true; // set hit4 to true
+                }
+                if (hit1 == true && hit2 == false) // otherwise if hit1 is true but the other hit bools are false
+                {
+                    hit2 = true; // set hit2 to true
+                    hit3 = true; // and also set hit3 to true
+                }
+                if (hit1 == false) // if none of the hit bools are true
+                {
+                    hit1 = true; // set hit1 to true
+                    hit2 = true; // and also set hit2 to true
+                }
+                if (other.gameObject.layer == 11)
+                {
+                    Destroy(other.gameObject); // if the thing hitting us operates on the red ranged layer, destroy it
+                }
             }
-            if (hit5 == true && hit6 == false) // If hit5 is true but hit6 is not true
-            {
-                hit6 = true; // set hit6 to true
-            }
-            if (hit4 == true && hit5 == false) // otherwise if hit4 is true and hit5 is false
-            {
-                hit5 = true; // set hit5 to true
-            }
-            if (hit3 == true && hit4 == false) // If hit2 is true but hit3 is not true
-            {
-                hit4 = true; // set hit4 to true
-            }
-            if (hit2 == true && hit3 == false) // otherwise if hit1 is true and hit two is false
-            {
-                hit3 = true; // set hit2 to true
-            }
-            if (hit1 == true && hit2 == false) // otherwise if hit1 is true and hit two is false
-            {
-                hit2 = true; // set hit2 to true
-            }
-            if (hit1 == false) // If hit1 is false
-            {
-                hit1 = true; // set hit1 to true
-            }
-        }
-        if (other.gameObject.CompareTag("HeavyWeapon")) // If the thing colliding with us has the tag Heavy Weapon (because this is track, make the hit behave like a med hit normally would x2 hits)
-        {
-            if (hit9 == true && hit10 == false) // otherwise if hit9 is true but hit10 is false
-            {
-                hit10 = true; // set hit10 to true
-            }
-            if (hit8 == true && hit9 == false) // otherwise if hit8 is true but hit9 is false
-            {
-                hit9 = true; // set hit9 to true
-                hit10 = true; // and also set hit10 to true
-            }
-            if (hit7 == true && hit8 == false) // otherwise if hit7 is true but hit8 is false
-            {
-                hit8 = true; // set hit8 to true
-                hit9 = true; // and also set hit9 to true
-            }
-            if (hit5 == true && hit6 == false) // otherwise if hit3 is true but hit4 is false
-            {
-                hit6 = true; // and also set hit6 to true
-                hit7 = true;
-            }
-            if (hit4 == true && hit5 == false) // otherwise if hit3 is true but hit4 is false
-            {
-                hit5 = true; // set hit5 to true
-                hit6 = true; // and also set hit6 to true
-            }
-            if (hit3 == true && hit4 == false) // otherwise if hit3 is true but hit4 is false
-            {
-                hit4 = true; // set hit4 to true
-                hit5 = true; // and also set hit5 to true
-            }
-            if (hit2 == true && hit3 == false) // otherwise if only hit3 is false
-            {
-                hit3 = true; // set hit3 to true
-                hit4 = true; // set hit4 to true
-            }
-            if (hit1 == true && hit2 == false) // otherwise if hit1 is true but the other hit bools are false
-            {
-                hit2 = true; // set hit2 to true
-                hit3 = true; // and also set hit3 to true
-            }
-            if (hit1 == false) // if none of the hit bools are true
-            {
-                hit1 = true; // set hit1 to true
-                hit2 = true; // and also set hit2 to true
-            }
-        }
-        if (other.gameObject.layer == 9)
-        {
-            Destroy(other.gameObject); // if the thing hitting us operates on the blue ranged layer, destroy it
-        }
-        if (other.gameObject.layer != 11) // if the layer of the object colliding with us is not red ranged
-        {
-            return;
-        }
-        if (other.gameObject.CompareTag("MediumWeapon"))// If the thing colliding with us has the tag Medium Weapon (because this is track, make the hit behave like a light hit normally would x1 hits)
-        {
-            if (hit9 == true && hit10 == false) // If hit9 is true but hit10 is not true
-            {
-                hit10 = true; // set hit10 to true
-            }
-            if (hit8 == true && hit9 == false) // If hit8 is true but hit9 is not true
-            {
-                hit9 = true; // set hit9 to true
-            }
-            if (hit7 == true && hit8 == false) // If hit7 is true but hit8 is not true
-            {
-                hit6 = true; // set hit7 to true
-            }
-            if (hit6 == true && hit7 == false) // If hit6 is true but hit7 is not true
-            {
-                hit7 = true; // set hit7 to true
-            }
-            if (hit5 == true && hit6 == false) // If hit5 is true but hit6 is not true
-            {
-                hit6 = true; // set hit6 to true
-            }
-            if (hit4 == true && hit5 == false) // otherwise if hit4 is true and hit5 is false
-            {
-                hit5 = true; // set hit5 to true
-            }
-            if (hit3 == true && hit4 == false) // If hit2 is true but hit3 is not true
-            {
-                hit4 = true; // set hit4 to true
-            }
-            if (hit2 == true && hit3 == false) // otherwise if hit1 is true and hit two is false
-            {
-                hit3 = true; // set hit2 to true
-            }
-            if (hit1 == true && hit2 == false) // otherwise if hit1 is true and hit two is false
-            {
-                hit2 = true; // set hit2 to true
-            }
-            if (hit1 == false) // If hit1 is false
-            {
-                hit1 = true; // set hit1 to true
-            }
-        }
-        if (other.gameObject.CompareTag("HeavyWeapon")) // If the thing colliding with us has the tag Heavy Weapon (because this is track, make the hit behave like a med hit normally would x2 hits)
-        {
-            if (hit9 == true && hit10 == false) // otherwise if hit9 is true but hit10 is false
-            {
-                hit10 = true; // set hit10 to true
-            }
-            if (hit8 == true && hit9 == false) // otherwise if hit8 is true but hit9 is false
-            {
-                hit9 = true; // set hit9 to true
-                hit10 = true; // and also set hit10 to true
-            }
-            if (hit7 == true && hit8 == false) // otherwise if hit7 is true but hit8 is false
-            {
-                hit8 = true; // set hit8 to true
-                hit9 = true; // and also set hit9 to true
-            }
-            if (hit5 == true && hit6 == false) // otherwise if hit3 is true but hit4 is false
-            {
-                hit6 = true; // and also set hit6 to true
-                hit7 = true;
-            }
-            if (hit4 == true && hit5 == false) // otherwise if hit3 is true but hit4 is false
-            {
-                hit5 = true; // set hit5 to true
-                hit6 = true; // and also set hit6 to true
-            }
-            if (hit3 == true && hit4 == false) // otherwise if hit3 is true but hit4 is false
-            {
-                hit4 = true; // set hit4 to true
-                hit5 = true; // and also set hit5 to true
-            }
-            if (hit2 == true && hit3 == false) // otherwise if only hit3 is false
-            {
-                hit3 = true; // set hit3 to true
-                hit4 = true; // set hit4 to true
-            }
-            if (hit1 == true && hit2 == false) // otherwise if hit1 is true but the other hit bools are false
-            {
-                hit2 = true; // set hit2 to true
-                hit3 = true; // and also set hit3 to true
-            }
-            if (hit1 == false) // if none of the hit bools are true
-            {
-                hit1 = true; // set hit1 to true
-                hit2 = true; // and also set hit2 to true
-            }
-        }
-        if (other.gameObject.layer == 11)
-        {
-            Destroy(other.gameObject); // if the thing hitting us operates on the red ranged layer, destroy it
         }
     }
 }
