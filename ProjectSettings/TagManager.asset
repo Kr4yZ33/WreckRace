@@ -12,6 +12,7 @@ TagManager:
   - MediumWeapon
   - BluePlayer
   - RedPlayer
+  - Ignore
   layers:
   - Default
   - TransparentFX
@@ -31,8 +32,8 @@ TagManager:
   - Vehicles
   - Controllers
   - Road
-  - 
-  - 
+  - Lighting
+  - Animals
   - 
   - 
   - 

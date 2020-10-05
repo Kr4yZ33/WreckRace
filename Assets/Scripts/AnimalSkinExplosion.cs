@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AnimalSkinExplosion : MonoBehaviour
 {
-    public float sphereSize = 0.2f;
+    public float sphereSize = 0.1f;
     public int spheresInRow = 4;
 
     float spherePivotDistance;

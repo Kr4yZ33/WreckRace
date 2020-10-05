@@ -143,9 +143,9 @@ public class BlueArmourHitBehaviour : MonoBehaviour
                     hit2 = true; // and also set hit2 to true
                 }
             }
-            if (other.gameObject.layer == 19)
+            if (other.gameObject.layer == 11)
             {
-                Destroy(other.gameObject); // if the thing hitting us operates on the blue ranged layer, destroy it
+                Destroy(other.gameObject); // if the thing hitting us operates on the red ranged layer, destroy it
             }
         }
     }

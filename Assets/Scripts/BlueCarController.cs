@@ -11,8 +11,7 @@ public class BlueCarController : MonoBehaviour
     public float strengthCoefficient = 200000f; // strength coefficient
     public float maxTurn = 10f; // turning angle
     public Transform blueRaceStart; // transform of the right race start position
-    //public Transform leftRaceStart; // transform of the left race start position
-    //public Transform topRightPortal; // transform of the top right portal
+    public Transform redRaceStart; // transform of the left race start position
     public Rigidbody rb; // reference to the Rigidbody of the object this script is attached to
 
     public float m_Accelleration; // the acceleration value
@@ -182,14 +181,14 @@ public class BlueCarController : MonoBehaviour
             transform.rotation = blueRaceStart.rotation; // set the transform rotation of the object this script is attached to to the right race start transform's rotation
             gameManager.LockToCarFloorBlue();
         }
-        //if (trigger.CompareTag("RedRaceStart")) // if a collider with the tag LeftRaceStart interacts with our collider
-        //{
-        //rb.velocity = Vector3.zero;  // set the rigidbody velocity to zero
-        //rb.angularVelocity = Vector3.zero;  // set the rigidbody angular velocity to zero
-        //transform.position = redRaceStart.position; // set the transform position of the object this script is attached to to the left race start position transform
-        //transform.rotation = redRaceStart.rotation; // set the transform rotation of the object this script is attached to to the left race start transform's rotation
-        //xRInputManager.LockToCarFloorRed();
-        //}
+        if (trigger.CompareTag("RedRaceStart")) // if a collider with the tag LeftRaceStart interacts with our collider
+        {
+            rb.velocity = Vector3.zero;  // set the rigidbody velocity to zero
+            rb.angularVelocity = Vector3.zero;  // set the rigidbody angular velocity to zero
+            transform.position = redRaceStart.position; // set the transform position of the object this script is attached to to the left race start position transform
+            transform.rotation = redRaceStart.rotation; // set the transform rotation of the object this script is attached to to the left race start transform's rotation
+            gameManager.LockToCarFloorBlue();
+        }
     }
 
     void OnTriggerExit(Collider trigger)

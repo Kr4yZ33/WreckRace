@@ -13,6 +13,7 @@ public class BlueCarAudio : MonoBehaviour
     public AudioClip ignitionClip; // reference to our ignition clip
     public AudioClip carSkeletonExplode;
     public AudioClip carSkinExplode;
+    public AudioClip carShotClip; // reference to our car shot clip
     //public AudioClip gameMusic1; // reference to our game music
     private AudioClip currentTrack; // the current track being played
     private AudioClip previousTrack; // the previous track that was played
@@ -48,6 +49,15 @@ public class BlueCarAudio : MonoBehaviour
     public void PlayCarSkeletonExplode()
     {
         audioSource.PlayOneShot(carSkeletonExplode, volume);
+    }
+
+    public void PlayCarShotClip()
+    {
+        if(currentTrack == carShotClip)
+        {
+            return;
+        }
+        audioSource.PlayOneShot(carShotClip, volume);
     }
 
     /// <summary>
