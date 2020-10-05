@@ -69,7 +69,7 @@ public class BlueCarSkinExplosion : MonoBehaviour
         GameObject piece;
         piece = GameObject.CreatePrimitive(PrimitiveType.Cube);
         Renderer r = piece.GetComponent<Renderer>(); // Get the renderer of the object object
-        r.material.color = Color.cyan; // apply the blue colour
+        r.material.color = Color.blue; // apply the blue colour
 
         //set piece position and scale
         piece.transform.position = transform.position + new Vector3(sphereSize * x, sphereSize * y, sphereSize * z) - spherePivot;

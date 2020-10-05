@@ -10,7 +10,7 @@ public class JumpBoost : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("BlueMelee"))
+        if (other.gameObject.layer == 8)
         {
             r = other.GetComponent<Rigidbody>();       
             {
