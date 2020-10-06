@@ -5,8 +5,8 @@ using UnityEngine;
 public class TrackExplosion : MonoBehaviour
 {
     public float cubeSize = 0.5f;
-    public int cubesInRow = 10;
-    public int cubesInRowZ = 5;
+    public int cubesInRow = 8;
+    public int cubesInRowZ = 4;
 
     float cubePivotDistance;
     Vector3 cubePivot;
