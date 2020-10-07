@@ -7,12 +7,12 @@ public class BlueCarSkeletonHitBehaviour : MonoBehaviour
     public BlueCarSkeletonExplosion carSkeletonExplosion;
     public BlueCarAudio carAudio; // reference to the Car Audio Script
 
-    public bool hit1; // reference to our true or false value for hit1
-    public bool hit2; // reference to our true or false value for hit2
-    public bool hit3; // reference to our true or false value for hit3
-    public bool hit4; // reference to our true or false value for hit4
-    public bool hit5; // reference to our true or false value for hit5
-    public bool hit6; // reference to our true or false value for hit6
+    bool hit1; // reference to our true or false value for hit1
+    bool hit2; // reference to our true or false value for hit2
+    bool hit3; // reference to our true or false value for hit3
+    bool hit4; // reference to our true or false value for hit4
+    bool hit5; // reference to our true or false value for hit5
+    bool hit6; // reference to our true or false value for hit6
 
     //public AudioClip skeletonHitSoundClip; // reference to our idle clip
     //public float volume = 0.5f; // Reference to the volume of our scare shot clip (plays over game musice that is already playing)

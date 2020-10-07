@@ -5,16 +5,16 @@ using UnityEngine;
 public class RedTrackHitBehaviour : MonoBehaviour
 {
     public RedTrackExplosion trackExplosion; // reference to the Armour Explosion script
-    public bool hit1; // reference to our true or false value for hit1
-    public bool hit2; // reference to our true or false value for hit2
-    public bool hit3; // reference to our true or false value for hit3
-    public bool hit4; // reference to our true or false value for hit4
-    public bool hit5; // reference to our true or false value for hit5
-    public bool hit6; // reference to our true or false value for hit6
-    public bool hit7; // reference to our true or false value for hit6
-    public bool hit8; // reference to our true or false value for hit6
-    public bool hit9; // reference to our true or false value for hit6
-    public bool hit10; // reference to our true or false value for hit6
+    bool hit1; // reference to our true or false value for hit1
+    bool hit2; // reference to our true or false value for hit2
+    bool hit3; // reference to our true or false value for hit3
+    bool hit4; // reference to our true or false value for hit4
+    bool hit5; // reference to our true or false value for hit5
+    bool hit6; // reference to our true or false value for hit6
+    bool hit7; // reference to our true or false value for hit6
+    bool hit8; // reference to our true or false value for hit6
+    bool hit9; // reference to our true or false value for hit6
+    bool hit10; // reference to our true or false value for hit6
 
     //Rigidbody blockRigid; // reference to the rigid body of the object this script is assigned to
     Renderer r; // refernce to our renderer
