@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/WreckRacePrototyping.unity
+    guid: a00250a8f0fe8364b85ea1ff6f7876af
   m_configObjects: {}
