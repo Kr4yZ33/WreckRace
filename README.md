@@ -1,3 +1,6 @@
+Trello board for itch.io Game Jam Beginners#3
+https://trello.com/invite/b/3w5VW8To/e7c8cb0476f9e89c0b11012912c5403b/itchiogamejambeginners3anotherplanet
+
 # WreckRace
 VR Car shooter
 https://youtu.be/hji79iv1Riw
