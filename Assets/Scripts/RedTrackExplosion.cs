@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class RedTrackExplosion : MonoBehaviour
 {
+    public BoomBoxAudio boomBoxAudio;
+
     public float cubeSize = 0.5f;
     public int cubesInRow = 10;
     public int cubesInRowZ = 5;
@@ -29,6 +31,8 @@ public class RedTrackExplosion : MonoBehaviour
     /// </summary>
     public void ExplodeTrack()
     {
+        boomBoxAudio.PlayTrackExplode();
+
         //make object disappear
         gameObject.SetActive(false);
 
