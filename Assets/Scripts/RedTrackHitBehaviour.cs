@@ -39,11 +39,11 @@ public class RedTrackHitBehaviour : MonoBehaviour
     {
         if (hit1 == true && hit2 == false) // if hit1 is true but hit 2 is not true yet
         {
-            r.material.color = Color.black; // apply the black colour to the object
+            r.material.color = Color.white; // apply the black colour to the object
         }
         if (hit2 == true && hit3 == false) // if hit2 is true but hit 3 is not true yet
         {
-            r.material.color = Color.black; // apply the black colour to the object
+            r.material.color = Color.white; // apply the black colour to the object
         }
         if (hit3 == true && hit4 == false) // if hit3 is true but hit 4 is not true yet
         {
@@ -67,11 +67,11 @@ public class RedTrackHitBehaviour : MonoBehaviour
         }
         if (hit9 == true && hit10 == false) // if hit9 is true but hit 10 is not true yet
         {
-            r.material.color = Color.white; // apply the white colour to the object
+            r.material.color = Color.black; // apply the white colour to the object
         }
         if (hit10 == true) // if hit 10 is true
         {
-            r.material.color = Color.white; // apply the white colour to the object
+            r.material.color = Color.black; // apply the white colour to the object
         }
     }
 

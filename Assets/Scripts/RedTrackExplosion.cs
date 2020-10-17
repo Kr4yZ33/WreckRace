@@ -73,7 +73,7 @@ public class RedTrackExplosion : MonoBehaviour
         GameObject piece;
         piece = GameObject.CreatePrimitive(PrimitiveType.Cube);
         Renderer r = piece.GetComponent<Renderer>(); // Get the renderer of the object object
-        r.material.color = Color.magenta; // apply the magenta colour
+        r.material.color = Color.black; // apply the magenta colour
 
         //set piece position and scale
         piece.transform.position = transform.position + new Vector3(cubeSize * x, cubeSize * y, cubeSize * z) - cubePivot;
