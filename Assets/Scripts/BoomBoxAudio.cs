@@ -11,6 +11,9 @@ public class BoomBoxAudio : MonoBehaviour
     public AudioClip gameClip1; // reference to our game clip1
     public AudioClip gameClip2; // reference to our game clip2
     public AudioClip gameClip3; // reference to our game clip3
+    public AudioClip gameClip4; // reference to our game clip4
+    public AudioClip gameClip5; // reference to our game clip5
+    public AudioClip gameClip6; // reference to our game clip6
     public AudioClip trackExplodeClip; // reference to our track explode clip
     private AudioClip currentTrack; // the current track being played
     private AudioClip previousTrack; // the previous track that was played
@@ -30,7 +33,7 @@ public class BoomBoxAudio : MonoBehaviour
     /// </summary>
     public void PlayGameClip1()
     {
-        if (currentTrack == null)
+        if (currentTrack != gameClip1)
         {
             previousTrack = gameClip1;
             currentTrack = previousTrack;
@@ -40,16 +43,52 @@ public class BoomBoxAudio : MonoBehaviour
 
     public void PlayGameClip2()
     {
-        previousTrack = gameClip2;
-        currentTrack = previousTrack;
-        ChangeTrack(currentTrack);
+        if (currentTrack != gameClip2)
+        {
+            previousTrack = gameClip2;
+            currentTrack = previousTrack;
+            ChangeTrack(currentTrack);
+        }
     }
 
     public void PlayGameClip3()
     {
-        previousTrack = gameClip3;
-        currentTrack = previousTrack;
-        ChangeTrack(currentTrack);
+        if (currentTrack != gameClip3)
+        {
+            previousTrack = gameClip3;
+            currentTrack = previousTrack;
+            ChangeTrack(currentTrack);
+        }
+    }
+
+    public void PlayGameClip4()
+    {
+        if (currentTrack != gameClip4)
+        {
+            previousTrack = gameClip4;
+            currentTrack = previousTrack;
+            ChangeTrack(currentTrack);
+        }
+    }
+
+    public void PlayGameClip5()
+    {
+        if (currentTrack != gameClip4)
+        {
+            previousTrack = gameClip4;
+            currentTrack = previousTrack;
+            ChangeTrack(currentTrack);
+        }
+    }
+
+    public void PlayGameClip6()
+    {
+        if (currentTrack != gameClip6)
+        {
+            previousTrack = gameClip6;
+            currentTrack = previousTrack;
+            ChangeTrack(currentTrack);
+        }
     }
 
     /// <summary>
@@ -64,23 +103,35 @@ public class BoomBoxAudio : MonoBehaviour
         }
         currentTrack = previousTrack; // set the current track to the previous track
         ChangeTrack(currentTrack); // play our previous track
-        volume = 0;
     }
 
     public void NextTrack()
     {
         if (isMusicPaused == true)
         {
-            PlayGameClip1();
             isMusicPaused = false;
+            PlayGameClip1();
         }
-        if (currentTrack == gameClip3)
+        if (currentTrack == gameClip6)
         {
-            previousTrack = null;
-            currentTrack = previousTrack;
-            ChangeTrack(currentTrack);
+            audioSource.Stop();
             isMusicPaused = true;
         }
+        if (currentTrack == gameClip5)
+        {
+            PlayGameClip6();
+        }
+
+        if (currentTrack == gameClip4)
+        {
+            PlayGameClip5();
+        }
+
+        if (currentTrack == gameClip3)
+        {
+            PlayGameClip4();
+        }
+
         if (currentTrack == gameClip2)
         {
             PlayGameClip3();
