@@ -42,10 +42,10 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    
-
     void Update()
     {
+        FunctionUpdate();
+
         if (usingCarBlue == true) // if using the car bool is true
         {
             LockToCarFloorBlue(); // call the lock to car floor function
@@ -66,6 +66,26 @@ public class GameManager : MonoBehaviour
 
         List<InputFeatureUsage> featuresB = new List<InputFeatureUsage>(); // create a new list for our input features
         deviceB.TryGetFeatureUsages(featuresB); // get all of the features of any type of device connected
+    }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    void FunctionUpdate()
+    {
+        if (Input.GetKey(KeyCode.Home))
+        {
+
+            //Home button pressed! write every thing you want to do
+        }
+        if (Input.GetKey(KeyCode.Escape))
+        {
+            //Escape button codes
+        }
+        if (Input.GetKey(KeyCode.Menu))
+        {
+            Application.Quit();
+        }
     }
 
     /// <summary>
