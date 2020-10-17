@@ -6,6 +6,7 @@ using UnityEngine.XR;
 
 public class RedCarController : MonoBehaviour
 {
+	public Cannon cannon;
 	public GameManager gameManager;
 	public List<AxleInfo> axleInfos;
 	public float maxMotorTorque;
@@ -14,6 +15,9 @@ public class RedCarController : MonoBehaviour
 	public float decelerationForce;
 	public float m_Steering; // the steering value
 
+	public float ShootDelay = 0.7f;
+	private float _lastShootTime;
+	private bool _doShoot = true;
 
 	public void FixedUpdate()
 	{
@@ -48,6 +52,26 @@ public class RedCarController : MonoBehaviour
                 //axleInfo.leftWheel.motorTorque = motor;
 				//axleInfo.rightWheel.motorTorque = motor;
 			}
+		}
+	}
+
+
+	void LateUpdate()
+	{
+		_lastShootTime += Time.deltaTime;
+		// Check if we can shoot again using ShootDelay as cooldown
+		if (_lastShootTime > ShootDelay)
+		{
+			_doShoot = false;
+		}
+		else if (_lastShootTime < ShootDelay)
+		{
+			_doShoot = true;
+		}
+		if(_doShoot == true)
+        {
+			cannon.Fire();
+			_doShoot = false;
 		}
 	}
 
@@ -115,7 +139,7 @@ public class RedCarController : MonoBehaviour
 	}
 
 	public Rigidbody rb;
-	public Transform blueRaceStart;
+	public Transform redRaceStart;
 
 	/// <summary>
 	/// set trigger condition for collisions with the object this script is attached to
@@ -125,7 +149,7 @@ public class RedCarController : MonoBehaviour
 	{
 		if (trigger.CompareTag("BluePlayer")) // if the trigger colliding with us has the tag blue Player
 		{
-			gameManager.usingCarBlue = true; // set bool for using car to true
+			gameManager.usingCarRed = true; // set bool for using car to true
 		}
 		//if (trigger.CompareTag("RedPlayer")) // if the trigger colliding with us has the tag Player
 		//{
@@ -133,12 +157,12 @@ public class RedCarController : MonoBehaviour
 		//}
 
 
-		if (trigger.CompareTag("BlueRaceStart")) // if a collider with the tag RightRaceStart interacts with our collider
+		if (trigger.CompareTag("RedRaceStart")) // if a collider with the tag RightRaceStart interacts with our collider
 		{
 			rb.velocity = Vector3.zero; // set the rigidbody velocity to zero
 			rb.angularVelocity = Vector3.zero;  // set the rigidbody angular velocity to zero
-			transform.position = blueRaceStart.position; // set the transform position of the object this script is attached to to the right race start position transform
-			transform.rotation = blueRaceStart.rotation; // set the transform rotation of the object this script is attached to to the right race start transform's rotation
+			transform.position = redRaceStart.position; // set the transform position of the object this script is attached to to the right race start position transform
+			transform.rotation = redRaceStart.rotation; // set the transform rotation of the object this script is attached to to the right race start transform's rotation
 			gameManager.LockToCarFloorBlue();
 		}
 		//if (trigger.CompareTag("RedRaceStart")) // if a collider with the tag LeftRaceStart interacts with our collider
@@ -156,7 +180,7 @@ public class RedCarController : MonoBehaviour
 		// disable the piece of code for mounting when we exit that trigger
 		if (trigger.CompareTag("BluePlayer"))
 		{
-			gameManager.usingCarBlue = false; // disable the using car bool
+			gameManager.usingCarRed = false; // disable the using car bool
 		}
 		// disable the piece of code for mounting when we exit that trigger
 		//if (trigger.CompareTag("RedPlayer"))
