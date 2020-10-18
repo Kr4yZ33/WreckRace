@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2461572208279975681}
   - component: {fileID: 3768440970138450658}
   - component: {fileID: 5654017051873461309}
+  - component: {fileID: 3804237717324013602}
   m_Layer: 9
   m_Name: BulletBlue
   m_TagString: HeavyWeapon
@@ -63,6 +64,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
+--- !u!114 &3804237717324013602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3941966220998060625}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9941672e76577045972a7e12e3de690, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4238731784866547367
 GameObject:
   m_ObjectHideFlags: 0

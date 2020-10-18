@@ -10,42 +10,33 @@ public class BlueCarMGController : MonoBehaviour
     public float mGShotDespawnTime = 5;
     public Transform mGShotSpawnLocation;
 
-    // How fast we can shoot again
-    public float ShootDelay = 0.01f;
+    public bool canShoot = true; // True or false statement regarding if we can shoot yet or not (following the shot delay)
+    public float timeBetweenShots = 0.01f; // 0.01 second between each shot
 
-    private bool _doShoot;
-    private float _lastShootTime;
-
-    // Call this to indicate we need to shoot
-    public void DoShoot()
+    public void Fire()
     {
-        _doShoot = true;
-    }
-
-    void Start()
-    {
-        _doShoot = false;
-    }
-
-    void LateUpdate()
-    {
-        _lastShootTime += Time.deltaTime;
-        // Check if we can shoot again using ShootDelay as cooldown
-        if (_doShoot && _lastShootTime > ShootDelay)
+        if (canShoot == false)
         {
-            _doShoot = false;
-            _lastShootTime -= ShootDelay;
-            {
-                Fire();
-            }
+            return;
+        }
+        else
+        {
+            GameObject clone = Instantiate(mGShotPrefab, mGShotSpawnLocation.position, mGShotSpawnLocation.rotation);
+            Destroy(clone, mGShotDespawnTime);
+            clone.GetComponent<Rigidbody>().AddForce(mGShotSpawnLocation.forward * mGShotForce);
+            blueCarAudio.PlayCarShotClip();
+            canShoot = false;
+            StartCoroutine(ShootDelay()); // start the shoot delay coroutine
         }
     }
 
-    void Fire()
+    /// <summary>
+    /// Our delay between shots
+    /// </summary>
+    /// <returns></returns>
+    IEnumerator ShootDelay()
     {
-        GameObject clone = Instantiate(mGShotPrefab, mGShotSpawnLocation.position, mGShotSpawnLocation.rotation);
-        Destroy(clone, mGShotDespawnTime);
-        clone.GetComponent<Rigidbody>().AddForce(mGShotSpawnLocation.forward * mGShotForce);
-        blueCarAudio.PlayCarShotClip();
+        yield return new WaitForSeconds(timeBetweenShots); // Amount of time we wait
+        canShoot = true; // set the can Shoot bool to True
     }
 }

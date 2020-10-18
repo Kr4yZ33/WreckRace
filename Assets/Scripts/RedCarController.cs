@@ -6,7 +6,6 @@ using UnityEngine.XR;
 
 public class RedCarController : MonoBehaviour
 {
-	public Cannon cannon;
 	public GameManager gameManager;
 	public List<AxleInfo> axleInfos;
 	public float maxMotorTorque;
@@ -14,10 +13,6 @@ public class RedCarController : MonoBehaviour
 	public float brakeTorque;
 	public float decelerationForce;
 	public float m_Steering; // the steering value
-
-	public float ShootDelay = 0.7f;
-	private float _lastShootTime;
-	private bool _doShoot = true;
 
 	public void FixedUpdate()
 	{
@@ -52,26 +47,6 @@ public class RedCarController : MonoBehaviour
                 //axleInfo.leftWheel.motorTorque = motor;
 				//axleInfo.rightWheel.motorTorque = motor;
 			}
-		}
-	}
-
-
-	void LateUpdate()
-	{
-		_lastShootTime += Time.deltaTime;
-		// Check if we can shoot again using ShootDelay as cooldown
-		if (_lastShootTime > ShootDelay)
-		{
-			_doShoot = false;
-		}
-		else if (_lastShootTime < ShootDelay)
-		{
-			_doShoot = true;
-		}
-		if(_doShoot == true)
-        {
-			cannon.Fire();
-			_doShoot = false;
 		}
 	}
 

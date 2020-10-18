@@ -175,11 +175,7 @@ public class BlueCarController : MonoBehaviour
 
         if (trigger.CompareTag("BlueRaceStart")) // if a collider with the tag RightRaceStart interacts with our collider
         {
-            rb.velocity = Vector3.zero; // set the rigidbody velocity to zero
-            rb.angularVelocity = Vector3.zero;  // set the rigidbody angular velocity to zero
-            transform.position = blueRaceStart.position; // set the transform position of the object this script is attached to to the right race start position transform
-            transform.rotation = blueRaceStart.rotation; // set the transform rotation of the object this script is attached to to the right race start transform's rotation
-            gameManager.LockToCarFloorBlue();
+            ResetCarToBlueRaceStart();
         }
         if (trigger.CompareTag("RedRaceStart")) // if a collider with the tag LeftRaceStart interacts with our collider
         {
@@ -203,5 +199,14 @@ public class BlueCarController : MonoBehaviour
         //{
         //usingCarRed = false; // disable the using car bool
         //}
+    }
+
+    public void ResetCarToBlueRaceStart()
+    {
+        rb.velocity = Vector3.zero; // set the rigidbody velocity to zero
+        rb.angularVelocity = Vector3.zero;  // set the rigidbody angular velocity to zero
+        transform.position = blueRaceStart.position; // set the transform position of the object this script is attached to to the right race start position transform
+        transform.rotation = blueRaceStart.rotation; // set the transform rotation of the object this script is attached to to the right race start transform's rotation
+        gameManager.LockToCarFloorBlue();
     }
 }

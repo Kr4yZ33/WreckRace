@@ -75,12 +75,11 @@ public class GameManager : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Home))
         {
-
-            //Home button pressed! write every thing you want to do
+            // home button codes
         }
         if (Input.GetKey(KeyCode.Escape))
         {
-            //Escape button codes
+            blueCarController.ResetCarToBlueRaceStart();
         }
         if (Input.GetKey(KeyCode.Menu))
         {
