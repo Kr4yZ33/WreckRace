@@ -8,7 +8,7 @@ Controls are: to get in car just get rig close to it. Once in car, left controll
 
 Backstory
 
-In Eons past, in the farthest reaches of the Universe, five Ancient Elementals (AEs) were spawned during the cataclysmic event of two stars colliding. Each representing the element that gave them life, Fire, Earth, Air, Water and Void (Note change Forrest below to Void).
+In Eons past, in the farthest reaches of the Universe, five Ancient Elementals (AEs) were spawned during the cataclysmic event of two stars colliding. Each representing the element that gave them life, Fire, Earth, Air, Water and Void.
 
 For a long time the AEs were content with building the planets they had occupied. Each molding the planet over time to represent their element, each and every planet a wonder of the Universe, a unique sight to behold.
 
