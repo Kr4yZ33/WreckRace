@@ -4,7 +4,7 @@ https://trello.com/invite/b/3w5VW8To/e7c8cb0476f9e89c0b11012912c5403b/itchiogame
 # WreckRace
 VR Car shooter
 https://youtu.be/hji79iv1Riw
-Controls are: to get in car just get rig close to it. Once in car, left controller moves and steers car. Buttons are left and right, trigger is accelerate. Any direction on analoge stick is brake, pass right hand through the spere on the right of the car dash to shoot the car guns. Grab on teleport areas portals there. There is a portal above the car to exit the car. 
+Controls are: to get in car just get rig close to it, there is a teleport platform above the drivers cockpit, you can use this to exit or get to the roof to shoot. Once in car, left controller moves and steers car using the Y & X buttons. Trigger is accelerate, any direction on analog stick breaks. Pass right hand through the spere on the right of the car dash to shoot the car guns (they shoot on hover enter and exit). At the bottom of the tracks opposite end to the jump, there is a trigger area that will teleport the blue car up onto the track. Grab portals around including up onto the tracks. The blue Jump has a power booster on it that activates when the Blue Car hits the jump area. 
 
 Backstory
 
