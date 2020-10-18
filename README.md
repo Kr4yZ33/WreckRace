@@ -15,3 +15,8 @@ For a long time the AEs were content with building the planets they had occupied
 After millennia the AEs grew bored, they conceived a grand game, from which a new race of beings emerged. These beings were to fight like gladiators in a massive battle royal, staged over many matches, to find a Champion team among one of the new races. 
 
 Each match is staged on another planet, a home side vs an away one. A mixture of driving, ranged and hand to hand combat. Teams work to race around a track and clear targets faster than their opponents. Don't stay in one spot for too long... Otherwise the gun turrets are sure to splatter your skin cubes all over the pavement!
+
+5 factions | Air | Fire | Earth | Water | Void
+
+5 classes of troops and 5 players per side each match, each faction has a class of tropp that is stronger for them. E.g. Fire & Assualt.
+Ninja - Void | Assualt - Fire | Engineer - Earth | Monk - Water | Sniper - Air
