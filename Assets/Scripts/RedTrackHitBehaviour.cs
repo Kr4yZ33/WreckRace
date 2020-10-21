@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class RedTrackHitBehaviour : MonoBehaviour
 {
+    public BlockScore blockScore; // reference to the Block Score script
+    public int score = 1; // int or number that can be set in the editor to adjust how much points you get when this object explodes
+
     public RedTrackExplosion trackExplosion; // reference to the Armour Explosion script
     bool hit1; // reference to our true or false value for hit1
     bool hit2; // reference to our true or false value for hit2
@@ -76,14 +79,15 @@ public class RedTrackHitBehaviour : MonoBehaviour
     }
 
     /// <summary>
-    /// Function that checks to see if hit3 is true yet or not
+    /// Function that checks to see if hit10 is true yet or not
     /// </summary>
     void CheckHitStatus()
     {
-        if (hit10 == true) // if hit6 is true
+        if (hit10 == true) // if hit10 is true
         {
             //blockRigid.useGravity = true; // enable gravity on the object this script is assigned to
             trackExplosion.ExplodeTrack(); // call the Skeleton explosion function from the Explode script
+            AddBlockScore(); // call the add block score function
         }
     }
 
@@ -203,5 +207,11 @@ public class RedTrackHitBehaviour : MonoBehaviour
                 }
             }
         }
+    }
+
+    void AddBlockScore()
+    {
+        blockScore.GetComponent<BlockScore>().AddScore(score); //call this function when you want to add score
+        Debug.Log("BlockScoreHit"); // debug to log "block score hit" when this function is called
     }
 }

@@ -213,4 +213,9 @@ public class GameManager : MonoBehaviour
         xRRigBlue.position = bluesCarExit.position; // set the XR rig position from the XR Rig script to the position of the car floor
         xRRigBlue.rotation = bluesCarExit.rotation; // set the XR rig rotation from the XR Rig script to the rotation of the car floor
     }
+
+    // block score
+    // time score
+    // total score | create block score script & time score script, create checkpoint gates that if not passed within x 
+    //time give a score penalty (e.g. do you go for time or for destorying max # of blocks? Adds to replay value)
 }
