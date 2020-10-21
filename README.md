@@ -11,7 +11,7 @@ WRECKRACE THE PRACTICE SESSION | FENIS VS NEPTIS
 
 Fire Elemental - Fernis | Water Elemental - Neptis | You - Neptis Assault Unit
 
-You look down at your hands, their appearance altered for this practice session, only twin ice spheres remaining. Thanks to the near depthless limits of the Ancient Water Elemental Neptis' Elemental Essence, the practice track stretches before your invisible face.
+You look down at your hands, their appearance altered for this practice session, only twin ice spheres remaining. Thanks to the near depthless limits of the Ancient Water Elemental Neptis' Elemental Essence, the practice track stretches before your invisible face. The mighty roar or a waterfall can be heard, spewing torrents of water from portals suspended in the sky. Towards the middle of the track, you can hear fire crackling and popping as a tree bursts into flame, molten lava touching it's base and cauing the pyrotechnic display.
 
 You look around, in the background "Another Planet" loomed mighty and foreboding in the background, fire cracked and representing the awesome power of Fernis the Ancient Fire Elemental.
 
