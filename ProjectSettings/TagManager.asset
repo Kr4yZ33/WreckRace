@@ -13,6 +13,8 @@ TagManager:
   - BluePlayer
   - RedPlayer
   - Ignore
+  - BlueCheckPoint
+  - RedCheckPoint
   layers:
   - Default
   - TransparentFX
