@@ -8,7 +8,9 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
 public class NerfDartBehaviour : MonoBehaviour
 {
+#pragma warning disable CS0109 // Member does not hide an inherited member; new keyword is not required
     protected new Rigidbody r;
+#pragma warning restore CS0109 // Member does not hide an inherited member; new keyword is not required
 
     void Start()
     {

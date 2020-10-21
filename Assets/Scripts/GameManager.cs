@@ -26,7 +26,7 @@ public class GameManager : MonoBehaviour
     public Transform blueCarFloor; // reference to the transform fo rthe car floor
     public Transform redCarFloor;
     public Transform xRRigBlue; // reference to the blue players XR rig
-    public Transform xRRigRed; // reference to the red players XR rig
+    //public Transform xRRigRed; // reference to the red players XR rig
 
     void GetDevice()
     {
@@ -101,8 +101,8 @@ public class GameManager : MonoBehaviour
     /// </summary>
     public void LockToCarFloorRed()
     {
-        xRRigRed.position = redCarFloor.position; // set the XR rig position from the XR Rig script to the position of the car floor
-        xRRigRed.rotation = redCarFloor.rotation; // set the XR rig rotation from the XR Rig script to the rotation of the car floor
+        xRRigBlue.position = redCarFloor.position; // set the XR rig position from the XR Rig script to the position of the car floor
+        xRRigBlue.rotation = redCarFloor.rotation; // set the XR rig rotation from the XR Rig script to the rotation of the car floor
     }
 
     /// <summary>

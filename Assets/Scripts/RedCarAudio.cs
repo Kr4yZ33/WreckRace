@@ -22,10 +22,6 @@ public class RedCarAudio : MonoBehaviour
 
     void Update()
     {
-        if (gameManager.usingCarRed == false)
-        {
-            StopTrack();
-        }
 
         if (gameManager.brake == true)
         {

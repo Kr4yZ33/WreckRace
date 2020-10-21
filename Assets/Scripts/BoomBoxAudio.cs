@@ -5,7 +5,6 @@ using UnityEngine;
 public class BoomBoxAudio : MonoBehaviour
 {
     public GameManager gameManager;
-    bool isMusicPaused = false;
 
     public AudioSource audioSource; // Reference to our Audio Source
     public AudioClip gameClip1; // reference to our game clip1
@@ -14,6 +13,9 @@ public class BoomBoxAudio : MonoBehaviour
     public AudioClip gameClip4; // reference to our game clip4
     public AudioClip gameClip5; // reference to our game clip5
     public AudioClip gameClip6; // reference to our game clip6
+    public AudioClip gameClip7; // reference to our game clip7
+    public AudioClip gameClip8; // reference to our game clip8
+    public AudioClip gameClip9; // reference to our game clip9
     public AudioClip trackExplodeClip; // reference to our track explode clip
     private AudioClip currentTrack; // the current track being played
     private AudioClip previousTrack; // the previous track that was played
@@ -73,9 +75,9 @@ public class BoomBoxAudio : MonoBehaviour
 
     public void PlayGameClip5()
     {
-        if (currentTrack != gameClip4)
+        if (currentTrack != gameClip5)
         {
-            previousTrack = gameClip4;
+            previousTrack = gameClip5;
             currentTrack = previousTrack;
             ChangeTrack(currentTrack);
         }
@@ -86,6 +88,36 @@ public class BoomBoxAudio : MonoBehaviour
         if (currentTrack != gameClip6)
         {
             previousTrack = gameClip6;
+            currentTrack = previousTrack;
+            ChangeTrack(currentTrack);
+        }
+    }
+
+    public void PlayGameClip7()
+    {
+        if (currentTrack != gameClip7)
+        {
+            previousTrack = gameClip7;
+            currentTrack = previousTrack;
+            ChangeTrack(currentTrack);
+        }
+    }
+
+    public void PlayGameClip8()
+    {
+        if (currentTrack != gameClip8)
+        {
+            previousTrack = gameClip8;
+            currentTrack = previousTrack;
+            ChangeTrack(currentTrack);
+        }
+    }
+
+    public void PlayGameClip9()
+    {
+        if (currentTrack != gameClip9)
+        {
+            previousTrack = gameClip9;
             currentTrack = previousTrack;
             ChangeTrack(currentTrack);
         }
@@ -107,15 +139,9 @@ public class BoomBoxAudio : MonoBehaviour
 
     public void NextTrack()
     {
-        if (isMusicPaused == true)
-        {
-            isMusicPaused = false;
-            PlayGameClip1();
-        }
         if (currentTrack == gameClip6)
         {
-            audioSource.Stop();
-            isMusicPaused = true;
+            PlayGameClip1();
         }
         if (currentTrack == gameClip5)
         {
