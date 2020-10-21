@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CheckPointScore : MonoBehaviour
 {
-    public CheckPointController checkPointController;
+    public CheckPointController checkPointController; // the object with the name StartBlue should be assigned to this reference in the editor
 
     public bool raceActiveC;
     bool canReset;

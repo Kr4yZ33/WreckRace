@@ -5,7 +5,7 @@ using UnityEngine;
 public class RedCarCannonController : MonoBehaviour
 {
     public AudioSource audioSource; // refernce to the Audio Manager script
-    public AudioClip redCarCannonShotClip;
+    //public AudioClip redCarCannonShotClip;
     public GameObject redCarCannonShotPrefab;
     public float redCarCannonShotForce = 1000;
     public float redCarCannonShotDespawnTime = 5;
@@ -34,7 +34,7 @@ public class RedCarCannonController : MonoBehaviour
             GameObject clone = Instantiate(redCarCannonShotPrefab, redCarCannonShotSpawnLocation.position, redCarCannonShotSpawnLocation.rotation);
             Destroy(clone, redCarCannonShotDespawnTime);
             clone.GetComponent<Rigidbody>().AddForce(redCarCannonShotSpawnLocation.forward * redCarCannonShotForce);
-            audioSource.PlayOneShot(redCarCannonShotClip, volume); // call the function to play our canns shot sound from the Audio Manager script
+            //audioSource.PlayOneShot(redCarCannonShotClip, volume); // call the function to play our canns shot sound from the Audio Manager script
             canShoot = false;
             StartCoroutine(ShootDelay()); // start the shoot delay coroutine
         }

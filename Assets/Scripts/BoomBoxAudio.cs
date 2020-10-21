@@ -139,10 +139,7 @@ public class BoomBoxAudio : MonoBehaviour
 
     public void NextTrack()
     {
-        if (currentTrack == gameClip6)
-        {
-            PlayGameClip1();
-        }
+        
         if (currentTrack == gameClip5)
         {
             PlayGameClip6();
@@ -167,6 +164,11 @@ public class BoomBoxAudio : MonoBehaviour
             PlayGameClip2();
         }
         if(currentTrack == null)
+        {
+            PlayGameClip1();
+        }
+
+        if (currentTrack == gameClip6)
         {
             PlayGameClip1();
         }

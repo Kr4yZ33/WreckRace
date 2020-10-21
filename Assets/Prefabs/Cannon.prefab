@@ -570,7 +570,7 @@ MonoBehaviour:
   cannonShotClip: {fileID: 8300000, guid: 5923a7895d8a0cf469ad994667e912e4, type: 3}
   cannonShotPrefab: {fileID: 2407975107210315782, guid: dd518c507cfd0b04f8bc6d74d12262ab,
     type: 3}
-  cannonShotForce: 1000
+  cannonShotForce: 1800
   cannonShotDespawnTime: 5
   cannonShotSpawnLocation: {fileID: 8141152367071027643}
   volume: 5

@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 4340689115235700913}
   - component: {fileID: 4340689115235700914}
   - component: {fileID: 4340689115235700915}
-  - component: {fileID: 4253589185794305352}
-  m_Layer: 17
+  - component: {fileID: 7852291138584550948}
+  m_Layer: 2
   m_Name: BlueCheckPoint
   m_TagString: BlueCheckPoint
   m_Icon: {fileID: 0}
@@ -13434,17 +13434,16 @@ MonoBehaviour:
   m_SelectedFaces: 
   m_SelectedEdges: []
   m_SelectedVertices: 
---- !u!136 &4253589185794305352
-CapsuleCollider:
+--- !u!65 &7852291138584550948
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4340689115235700925}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 3.48
-  m_Height: 8.05
-  m_Direction: 0
+  serializedVersion: 2
+  m_Size: {x: 8.105375, y: 0.28000006, z: 8.112683}
   m_Center: {x: -4.0526876, y: 0, z: 0}

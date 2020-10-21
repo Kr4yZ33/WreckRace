@@ -122,10 +122,10 @@ public class RedCarController : MonoBehaviour
 	/// <param name="trigger"></param>
 	void OnTriggerEnter(Collider trigger)
 	{
-		if (trigger.CompareTag("BluePlayer")) // if the trigger colliding with us has the tag blue Player
-		{
-			gameManager.usingCarRed = true; // set bool for using car to true
-		}
+		//if (trigger.CompareTag("BluePlayer")) // if the trigger colliding with us has the tag blue Player
+		//{
+			//gameManager.usingCarRed = true; // set bool for using car to true
+		//}
 		//if (trigger.CompareTag("RedPlayer")) // if the trigger colliding with us has the tag Player
 		//{
 		// usingCarRed = true; // set bool for using car to true
