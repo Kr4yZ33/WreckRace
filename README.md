@@ -1,15 +1,15 @@
 Trello board for itch.io Game Jam Beginners#3
 https://trello.com/invite/b/3w5VW8To/e7c8cb0476f9e89c0b11012912c5403b/itchiogamejambeginners3anotherplanet
 
+GoogleDRive folder: https://drive.google.com/drive/folders/1YxcLRXkISBfnZsQuYPQH2BzMuH0hohA9?usp=sharing
+
 # WreckRace
 VR Car shooter
 https://youtu.be/nvCCKYyzEuI
 
-Fire Elemental - Fernis
-Water Elemental - Neptis
-You - Neptis Assault Unit
+WRECKRACE THE PRACTICE SESSION | FENIS VS NEPTIS
 
-WreckRace - The Practice Session | Fernis vs Neptis
+Fire Elemental - Fernis | Water Elemental - Neptis | You - Neptis Assault Unit
 
 You look down at your hands, their appearance altered for this practice session, only twin ice spheres remaining. Thanks to the near depthless limits of the Ancient Water Elemental Neptis' Elemental Essence, the practice track stretches before your invisible face.
 
