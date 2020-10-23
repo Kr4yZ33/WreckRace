@@ -12,8 +12,10 @@ public class GameManager : MonoBehaviour
     readonly List<InputDevice> devices = new List<InputDevice>(); // read only list of input devices
 
     InputDevice deviceB; // reference to our input device
+    //public RedCarController redCarController;
     public BlueCarController blueCarController;
-    public RedCarController redCarController;
+    public ResetPlayer resetPlayer;
+
     public bool usingCarBlue = false; // bool for using the blue car being true or not
     public bool usingCarRed = false; // bool for using the red car being true or not
     public bool accelerate; // bool for the car accelerating being true or not
@@ -22,9 +24,9 @@ public class GameManager : MonoBehaviour
     public bool turnR; // bool for if the car turning right is true or not
     public bool turnL; // bool for if the car turning left is true or not
 
-    public Transform bluesCarExit;
     public Transform blueCarFloor; // reference to the transform fo rthe car floor
-    public Transform redCarFloor;
+    public Transform blueCarRoof; // reference to trhe roof of the blue car
+    //public Transform redCarFloor;
     public Transform xRRigBlue; // reference to the blue players XR rig
     //public Transform xRRigRed; // reference to the red players XR rig
 
@@ -55,8 +57,8 @@ public class GameManager : MonoBehaviour
 
         if (usingCarRed == true) // if using the car bool is true
         {
-        LockToCarFloorRed(); // call the lock to car floor function
-        ControlsWhileDrivingB(); // call the function for controls while driving
+            //LockToCarFloorRed(); // call the lock to car floor function
+            ControlsWhileDrivingB(); // call the function for controls while driving
         }
 
         if (!deviceB.isValid) // if device is valid is not true
@@ -79,7 +81,7 @@ public class GameManager : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.Escape))
         {
-            blueCarController.ResetCarToBlueRaceStart();
+            // escape button codes
         }
         if (Input.GetKey(KeyCode.Menu))
         {
@@ -96,14 +98,21 @@ public class GameManager : MonoBehaviour
         xRRigBlue.rotation = blueCarFloor.rotation; // set the XR rig rotation from the XR Rig script to the rotation of the car floor
     }
 
+    public void LockToCarRoof()
+    {
+        usingCarBlue = false;
+        xRRigBlue.position = blueCarRoof.position; // set the XR rig position from the XR Rig script to the position of the car roof
+        xRRigBlue.rotation = blueCarRoof.rotation; // set the XR rig rotation from the XR Rig script to the rotation of the car roof
+    }
+
     /// <summary>
     /// function to lock the red players XR rig to the car floor
     /// </summary>
-    public void LockToCarFloorRed()
-    {
-        xRRigBlue.position = redCarFloor.position; // set the XR rig position from the XR Rig script to the position of the car floor
-        xRRigBlue.rotation = redCarFloor.rotation; // set the XR rig rotation from the XR Rig script to the rotation of the car floor
-    }
+    //public void LockToCarFloorRed()
+    //{
+        //xRRigBlue.position = redCarFloor.position; // set the XR rig position from the XR Rig script to the position of the car floor
+        //xRRigBlue.rotation = redCarFloor.rotation; // set the XR rig rotation from the XR Rig script to the rotation of the car floor
+    //}
 
     /// <summary>
     /// controls that are only active while the using car bool is true
@@ -207,15 +216,9 @@ public class GameManager : MonoBehaviour
             turnR = false;  // set turn right to false
         }
     }
-
-    public void ExitBlueCar()
-    {
-        xRRigBlue.position = bluesCarExit.position; // set the XR rig position from the XR Rig script to the position of the car floor
-        xRRigBlue.rotation = bluesCarExit.rotation; // set the XR rig rotation from the XR Rig script to the rotation of the car floor
-    }
-
-    // block score
-    // time score
-    // total score | create block score script & time score script, create checkpoint gates that if not passed within x 
-    //time give a score penalty (e.g. do you go for time or for destorying max # of blocks? Adds to replay value)
 }
+
+    // block score script created but not working so removed
+    // time score script created but not working so removed
+    // total score script created but not working so removed
+    //time give a score penalty (e.g. do you go for time or for destorying max # of blocks? Adds to replay value)

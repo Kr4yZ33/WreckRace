@@ -97,7 +97,7 @@ public class RedTrackHitBehaviour : MonoBehaviour
     /// <param name="collision"></param>
     private void OnTriggerEnter(Collider other) // on a collision between this objects rigidbody and another objects rigidbody
     {
-        Debug.Log("I Have collided with" + other.gameObject.name); // debug that outputs what happened with the collision
+        // Debug.Log("I Have collided with" + other.gameObject.name); // debug that outputs what happened with the collision
         {
             if (other.gameObject.layer == 11)
             {

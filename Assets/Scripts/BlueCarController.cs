@@ -10,6 +10,8 @@ public class BlueCarController : MonoBehaviour
     public List<WheelCollider> steeringWheels; // list of wheel colliders used for steering
     public float strengthCoefficient = 200000f; // strength coefficient
     public float maxTurn = 10f; // turning angle
+
+    public Transform blueCarStartPosition; // refernec to the transform for the blue car starting position (used for resetting the car)
     public Transform blueRaceStart; // transform of the right race start position
     public Transform redRaceStart; // transform of the left race start position
     public Rigidbody rb; // reference to the Rigidbody of the object this script is attached to
@@ -187,19 +189,27 @@ public class BlueCarController : MonoBehaviour
         }
     }
 
-    void OnTriggerExit(Collider trigger)
+    public void ResetBlueCar()
     {
-        // disable the piece of code for mounting when we exit that trigger
-        if (trigger.CompareTag("BluePlayer"))
-        {
-            gameManager.usingCarBlue = false; // disable the using car bool
-        }
-        // disable the piece of code for mounting when we exit that trigger
-        //if (trigger.CompareTag("RedPlayer"))
-        //{
-        //usingCarRed = false; // disable the using car bool
-        //}
+        rb.velocity = Vector3.zero;  // set the rigidbody velocity to zero
+        rb.angularVelocity = Vector3.zero;  // set the rigidbody angular velocity to zero
+        transform.position = blueCarStartPosition.position; // set the transform position of the object this script is attached to to the blue car start position transform
+        transform.rotation = blueCarStartPosition.rotation; // set the transform rotation of the object this script is attached to to the blue car start transform's rotation
     }
+
+    //void OnTriggerExit(Collider trigger)
+    //{
+    // disable the piece of code for mounting when we exit that trigger
+    //if (trigger.CompareTag("BluePlayer"))
+    //{
+    //gameManager.usingCarBlue = false; // disable the using car bool
+    //}
+    // disable the piece of code for mounting when we exit that trigger
+    //if (trigger.CompareTag("RedPlayer"))
+    //{
+    //usingCarRed = false; // disable the using car bool
+    //}
+    //}
 
     public void ResetCarToBlueRaceStart()
     {
@@ -209,4 +219,10 @@ public class BlueCarController : MonoBehaviour
         transform.rotation = blueRaceStart.rotation; // set the transform rotation of the object this script is attached to to the right race start transform's rotation
         gameManager.LockToCarFloorBlue();
     }
+
+    //public void ExitBlueCar()
+    //{
+        //xRRigBlue.position = bluesCarExit.position; // set the XR rig position from the XR Rig script to the position of the car floor
+        //xRRigBlue.rotation = bluesCarExit.rotation; // set the XR rig rotation from the XR Rig script to the rotation of the car floor
+    //}
 }
